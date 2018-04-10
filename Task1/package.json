@@ -1,0 +1,24 @@
+{
+  "name": "movie-database",
+  "version": "1.0.0",
+  "description": "movie db database on reactjs",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DzmitryAlfer/ReactJSCourse.git"
+  },
+  "author": "Dzmitry Alfer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DzmitryAlfer/ReactJSCourse/issues"
+  },
+  "homepage": "https://github.com/DzmitryAlfer/ReactJSCourse#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "react": "^16.3.1"
+  }
+}
