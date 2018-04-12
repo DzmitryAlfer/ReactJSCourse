@@ -1,11 +1,12 @@
 import React from 'react';
+import { TextComponent } from './TextComponent';
 
 export class DocumentHeaderComponent extends React.Component {
     render() {
         return (<header> 
             <div id="search-control">
 				<div>
-					<span>FIND YOUR MOVIE</span>
+					<TextComponent text="FIND YOUR MOVIE"></TextComponent>
 				</div>
 				<div>
 					<input type="search"/>
