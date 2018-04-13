@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import { DocumentHeaderComponent } from './components/DocumentHeaderComponent'
+import { DocumentComponent } from './components/DocumentComponent'
 
-//const element = React.createElement('h1',{id:'idHelloWorld'}, 'Hello World');
+document.addEventListener("DOMContentLoaded", function(){
+    console.trace('start render page')
+    ReactDom.render(<DocumentComponent/>, document.getElementById('root'));
 
-ReactDom.render(<DocumentHeaderComponent/>, document.getElementById('root'));
-
-console.trace('run')
+    const element = React.createElement('h1',{id:'idHelloWorld'}, 'Hello World');
+    ReactDom.render(element, document.getElementById('mainBody'))
+});

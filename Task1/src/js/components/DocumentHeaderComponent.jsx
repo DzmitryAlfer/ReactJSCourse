@@ -1,7 +1,8 @@
 import React from 'react';
 import { TextComponent } from './TextComponent';
+import { SearchByComponent } from './SearchByComponent';
 
-export class DocumentHeaderComponent extends React.Component {
+export class DocumentHeaderComponent extends React.PureComponent {
     render() {
         return (<header> 
             <div id="search-control">
@@ -12,13 +13,8 @@ export class DocumentHeaderComponent extends React.Component {
 					<input type="search"/>
 				</div>
 				<div>
-					<div className="left-search-by">
-						<span>SEARCH BY</span>
-						<button>TITLE</button>
-						<button>DIRECTOR</button>
-					</div>
+					<SearchByComponent></SearchByComponent>
 					<div className="right-search-button">
-
 					</div>
 				</div>
 			</div>
