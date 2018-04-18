@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { DocumentHeaderComponent } from './DocumentHeaderComponent';
 
-export class DocumentComponent extends React.Component {
+export class DocumentComponent extends Component {
     render() {
         return (<div>
                     <DocumentHeaderComponent></DocumentHeaderComponent>

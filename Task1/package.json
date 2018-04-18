@@ -4,8 +4,8 @@
   "description": "movie db database on reactjs",
   "private": true,
   "scripts": {
-    "start": "node server.js",
-    "build": "webpack",
+    "api": "node server.js",
+    "start": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
