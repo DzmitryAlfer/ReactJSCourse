@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -22,8 +23,17 @@ module.exports = {
             }
         ]
     },
+
+    plugins: [
+        new HtmlWebpackPlugin({
+          title: "Task2",
+          hash: true,
+          template: "./index.html"
+        })
+      ],
     
     mode: 'development',
+    devtool: "none",
 
     watch: false
 };
