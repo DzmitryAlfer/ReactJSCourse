@@ -64,3 +64,26 @@ body{
 .sort-by_button--selected {
     color: red;
 }
+
+/* Main */
+.main-body{
+    padding: 20px 0px;
+}
+
+/* Search results */
+.search-results{
+
+}
+
+.search-result_item {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.search-result-image{
+    width: 250px;
+}
+
+.movie-year {
+    border: 1px solid black;
+}
