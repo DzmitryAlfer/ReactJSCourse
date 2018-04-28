@@ -5,9 +5,9 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "api": "node server.js",
-    "start": "webpack",
-    "build-prod": "webpack -p",
+    "api": "webpack-dev-server",
+    "watch": "webpack",
+    "build:prod": "webpack -p",
     "test": "jest"
   },
   "repository": {

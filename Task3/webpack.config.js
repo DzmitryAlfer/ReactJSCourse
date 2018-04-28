@@ -10,7 +10,7 @@ module.exports = function(env, options) {
         entry: "./js/index.js",
 
         output: {
-            path: isProduction ? path.resolve(__dirname, "release") : path.resolve(__dirname, "dist"),
+            path: isProduction ? path.resolve(__dirname, "release") : path.resolve(__dirname, "debug"),
             filename: "js/index.js"
         },
 
@@ -39,7 +39,7 @@ module.exports = function(env, options) {
         mode: isProduction ? "production" : "development",
         devtool: isProduction ? "none" : "source-map",
 
-        watch: false
+        watch: true
     };
 
     return config;

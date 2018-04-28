@@ -1,3 +1,5 @@
 node_modules
 Task2/dist/
 Task2/release/
+debug
+release
