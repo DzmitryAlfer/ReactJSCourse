@@ -3,7 +3,7 @@ import { SearchControlHeader } from './SearchControlHeader';
 
 export class DocumentHeaderComponent extends PureComponent {
     render() {
-        return (<header class="document-header">
+        return (<header className="document-header">
             <SearchControlHeader></SearchControlHeader>
         </header>);
     }

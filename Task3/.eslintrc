@@ -7,6 +7,7 @@
         "ecmaVersion": 7,
         "sourceType": "module"
     },
+  "plugins": ["react"],
     "env": {
         "browser": true,
         "node": true,
@@ -93,6 +94,8 @@
         "no-var": "error",
         "prefer-template": "error",
 
-        "security/detect-non-literal-fs-filename": "off"
+      "react/jsx-uses-react": 2,
+      "react/jsx-uses-vars": 2,
+      "react/react-in-jsx-scope": 2
     }
 }
