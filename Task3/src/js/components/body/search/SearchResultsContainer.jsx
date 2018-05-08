@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react'
-import {MoviesDataSource} from '../../../services/api/MoviesDataSource';
-import {SearchResultsComponent} from './SearchResultsComponent';
+import { MoviesDataSource } from '../../../services/api/MoviesDataSource';
+import { SearchResultsComponent } from './SearchResultsComponent';
 
-export class SearchResultsContainer extends PureComponent{
+export class SearchResultsContainer extends PureComponent {
     constructor(props){
         super(props);
         this.state = {searchResults: []};

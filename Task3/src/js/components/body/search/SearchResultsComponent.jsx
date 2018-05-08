@@ -7,7 +7,7 @@ export const SearchResultsComponent = ({movies}) => (
     <div className="search-results">
         {
             movies && movies.length > 0
-                ? movies.map((movie) => <SearchResultItemComponent movie={movie}/>)
+                ? movies.map((movie) => <SearchResultItemComponent key={movie.id} movie={movie}/>)
                 : (<div>No films found</div>)
         }
     </div>
