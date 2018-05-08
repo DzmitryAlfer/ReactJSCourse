@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {MoviePropType} from '../../../ProjectPropTypes/MoviePropType';
 
 export const SearchResultItemComponent = ({movie}) => (
     <div className="search-result_item">
@@ -19,5 +20,5 @@ export const SearchResultItemComponent = ({movie}) => (
 );
 
 SearchResultItemComponent.propTypes = {
-  movie: PropTypes.any.isRequired
+  movie: PropTypes.shape(MoviePropType)
 };

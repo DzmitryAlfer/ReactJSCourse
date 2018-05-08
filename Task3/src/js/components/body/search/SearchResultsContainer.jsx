@@ -5,16 +5,16 @@ import {SearchResultsComponent} from './SearchResultsComponent';
 export class SearchResultsContainer extends PureComponent{
     constructor(props){
         super(props);
-        this.state = {movies: []};
+        this.state = {searchResults: []};
     }
 
     componentDidMount() {
-        MoviesDataSource.getMovies().then((movies) => {
-            this.setState({movies: movies});
+        MoviesDataSource.getMovies().then((searchResults) => {
+            this.setState({searchResults: searchResults});
         });
     }
 
     render() {
-        return (<SearchResultsComponent movies={this.state.movies}/>);
+        return (<SearchResultsComponent movies={this.state.searchResults.data}/>);
     }
 }
