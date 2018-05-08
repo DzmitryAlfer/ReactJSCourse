@@ -7,7 +7,7 @@ import {SearchResultsSortByComponent} from './SearchResultsSortByComponent';
 export const SearchInfoComponent = ({numberOfItems, onSortBy}) => (
     <div className="document-header_item search-info">
         <SearchResultsNumberOfItemsComponent numberOfItems={numberOfItems}/>
-        <SearchResultsSortByComponent onSortBy={onSortBy} />
+        <SearchResultsSortByComponent onSortBy={onSortBy}/>
     </div>
 );
 
