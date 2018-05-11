@@ -4,9 +4,9 @@ import {DocumentBodyComponent} from './body/DocumentBodyComponent';
 
 export class DocumentComponent extends Component {
     render() {
-        return (<div>
-                    <DocumentHeaderComponent></DocumentHeaderComponent>
-                    <DocumentBodyComponent></DocumentBodyComponent>
-                </div>);
+        return (<React.Fragment>
+            <DocumentHeaderComponent></DocumentHeaderComponent>
+            <DocumentBodyComponent></DocumentBodyComponent>
+        </React.Fragment>);
     }
 }

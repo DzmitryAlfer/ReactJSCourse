@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-const SearchResultsSortByComponentState = Object.freeze({
+export const SearchResultsSortByComponentState = Object.freeze({
     RELEASE_DATE: 'release-date',
     RATING: 'rating'
 });
@@ -14,7 +14,7 @@ export class SearchResultsSortByComponent extends PureComponent {
     }
 
     onSortBy(sortBy = SearchResultsSortByComponentState.RELEASE_DATE) {
-        if(this.props.onSortBy) {
+        if (this.props.onSortBy) {
             this.props.onSortBy(sortBy);
         }
 

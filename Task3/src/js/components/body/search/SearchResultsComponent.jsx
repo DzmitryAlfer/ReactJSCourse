@@ -1,19 +1,23 @@
+/* eslint-disable indent */
 import React from 'react';
 import PropTypes from 'prop-types';
-import {SearchResultItemComponent} from './SearchResultItemComponent';
-import {MoviePropType} from '../../../ProjectPropTypes/MoviePropType';
+import { SearchResultItemComponent } from './SearchResultItemComponent';
+import { MoviePropType } from '../../../ProjectPropTypes/MoviePropType';
 
-export const SearchResultsComponent = ({movies}) => (
-    <div className="search-results">
-        {
+export const SearchResultsComponent = ({ movies }) => (
+  <div className="search-results">
+    {
             movies && movies.length > 0
-                ? movies.map((movie) => <SearchResultItemComponent key={movie.id} movie={movie}/>)
+                ? movies.map(movie => <SearchResultItemComponent key={movie.id} movie={movie} />)
                 : (<div>No films found</div>)
         }
-    </div>
+  </div>
 );
 
+SearchResultsComponent.defaultProps = {
+    movies: [],
+};
 
 SearchResultsComponent.propTypes = {
-    movies: PropTypes.arrayOf(PropTypes.shape(MoviePropType))
+  movies: PropTypes.arrayOf(PropTypes.shape(MoviePropType)),
 };
