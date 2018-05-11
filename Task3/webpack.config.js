@@ -43,13 +43,13 @@ module.exports = function(env, options) {
                 title: 'Task2',
                 hash: true,
                 template: './index.html'
-            })
+            }),
         ],
 
         mode: isProduction ? 'production' : 'development',
         devtool: isProduction ? 'none' : 'source-map',
 
-        watch: true
+        watch: false
     };
 
     return config;

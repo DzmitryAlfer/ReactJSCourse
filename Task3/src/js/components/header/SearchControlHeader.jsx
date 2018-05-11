@@ -7,9 +7,11 @@ export class SearchControlHeader extends PureComponent {
 				<div className="header-search-control_item">
 					<span className="header-text">FIND YOUR MOVIE</span>
 				</div>
+
 				<div className="header-search-control_item">
 					<input type="search" className="header-search-control_input-search"/>
 				</div>
+
 				<div className="header-search-control_item search-by-control">
 					<div className="search-by-control_item">
 						<span className="header-text">SEARCH BY</span>

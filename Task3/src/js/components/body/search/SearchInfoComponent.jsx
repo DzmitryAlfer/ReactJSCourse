@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {SearchResultsNumberOfItemsComponent} from './SearchResultsNumberOfItemsComponent';
-import {SearchResultsSortByComponent} from './SearchResultsSortByComponent';
+import { SearchResultsNumberOfItemsComponent } from './SearchResultsNumberOfItemsComponent';
+import { SearchResultsSortByComponent } from './SearchResultsSortByComponent';
 
 
-export const SearchInfoComponent = ({numberOfItems, onSortBy}) => (
+export const SearchInfoComponent = ({ numberOfItems, onSortBy }) => (
     <div className="document-header_item search-info">
-        <SearchResultsNumberOfItemsComponent numberOfItems={numberOfItems}/>
-        <SearchResultsSortByComponent onSortBy={onSortBy}/>
-    </div>
+        <SearchResultsNumberOfItemsComponent numberOfItems={numberOfItems} />
+        <SearchResultsSortByComponent onSortBy={onSortBy} />
+  </div>
 );
 
 SearchInfoComponent.propTypes = {
     numberOfItems: PropTypes.number.isRequired,
-    onSortBy : PropTypes.func
-}
+    onSortBy: PropTypes.func,
+};

@@ -5,7 +5,7 @@ import { SearchResultsComponent } from './SearchResultsComponent';
 export class SearchResultsContainer extends PureComponent {
     constructor(props) {
         super(props);
-        this.state = { searchResults: [] };
+        this.state = { searchResults: { data: [], total: 0 } };
     }
 
     componentDidMount() {
@@ -15,6 +15,6 @@ export class SearchResultsContainer extends PureComponent {
     }
 
     render() {
-        return (<SearchResultsComponent movies={this.state.searchResults.data} />);
+        return <SearchResultsComponent movies={this.state.searchResults.data} numberOfMovies={this.state.searchResults.total}/>;
     }
 }
