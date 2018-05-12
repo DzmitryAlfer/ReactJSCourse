@@ -5,6 +5,14 @@ import { MoviePropType } from '../../../ProjectPropTypes/MoviePropType';
 import { SearchInfoComponent } from './SearchInfoComponent';
 
 export class SearchResultsComponent extends PureComponent {
+
+    constructor(props){
+        super(props);
+
+    }
+
+
+
     render() {
         const { movies, numberOfMovies } = this.props;
 
