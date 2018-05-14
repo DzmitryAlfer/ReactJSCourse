@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import { SearchResultItemComponent } from './SearchResultItemComponent';
 import { MoviePropType } from '../../../ProjectPropTypes/MoviePropType';
 import { SearchInfoComponent } from './SearchInfoComponent';
+import {SearchResultsSortByComponentState} from "./SearchResultsSortByComponent";
 
 export class SearchResultsComponent extends PureComponent {
 
     constructor(props){
         super(props);
-
     }
+
 
 
 
@@ -19,7 +20,7 @@ export class SearchResultsComponent extends PureComponent {
         if (movies && movies.length > 0) {
             return (
               <div className="search-results">
-                  <SearchInfoComponent numberOfItems={numberOfMovies} />
+                  <SearchInfoComponent numberOfItems={numberOfMovies} onSortBy={this.props.onSortBy} />
                   {movies.map(movie => <SearchResultItemComponent key={movie.id} movie={movie} onItemClick={() => {this.props.onItemClick(movie);}} />)}
                 </div>);
         }
@@ -30,7 +31,7 @@ export class SearchResultsComponent extends PureComponent {
 
 SearchResultsComponent.defaultProps = {
     movies: [],
-    numberOfMovies: 0,
+    numberOfMovies: -1,
     onItemClick: () => {},
 };
 
