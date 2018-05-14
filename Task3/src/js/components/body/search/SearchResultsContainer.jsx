@@ -16,6 +16,6 @@ export class SearchResultsContainer extends PureComponent {
 
     render() {
         const filteredResults = this.state.searchResults.data.filter((movie) => !this.props.searchString || this.props.searchString === "" ? true : movie.title.toLowerCase() === this.props.searchString.toLowerCase());
-        return <SearchResultsComponent movies={filteredResults} numberOfMovies={this.state.searchResults.total}/>;
+        return <SearchResultsComponent movies={filteredResults} numberOfMovies={this.state.searchResults.total} onItemClick={this.props.onItemClick}/>;
     }
 };

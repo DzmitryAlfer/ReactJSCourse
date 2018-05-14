@@ -87,3 +87,8 @@ body{
 .movie-year {
     border: 1px solid black;
 }
+
+.description-movie-doc-header {
+    display: flex;
+    justify-content: space-between;
+}

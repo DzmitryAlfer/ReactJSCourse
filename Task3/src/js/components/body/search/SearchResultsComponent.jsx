@@ -20,7 +20,7 @@ export class SearchResultsComponent extends PureComponent {
             return (
               <div className="search-results">
                   <SearchInfoComponent numberOfItems={numberOfMovies} />
-                  {movies.map(movie => <SearchResultItemComponent key={movie.id} movie={movie} />)}
+                  {movies.map(movie => <SearchResultItemComponent key={movie.id} movie={movie} onItemClick={() => {this.props.onItemClick(movie);}} />)}
                 </div>);
         }
 
@@ -31,9 +31,11 @@ export class SearchResultsComponent extends PureComponent {
 SearchResultsComponent.defaultProps = {
     movies: [],
     numberOfMovies: 0,
+    onItemClick: () => {},
 };
 
 SearchResultsComponent.propTypes = {
     movies: PropTypes.arrayOf(PropTypes.shape(MoviePropType)),
     numberOfMovies: PropTypes.number,
+    onItemClick: PropTypes.func,
 };

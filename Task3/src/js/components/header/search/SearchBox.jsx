@@ -8,5 +8,5 @@ export const SearchBox = ({inputControlRef}) =>(
 );
 
 SearchBox.propTypes = {
-    inputControlRef: PropTypes.shape({ value: PropTypes.instanceOf(HTMLInputElement) }),
+    inputControlRef: PropTypes.func,
 };
