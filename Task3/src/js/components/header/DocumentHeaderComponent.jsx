@@ -1,11 +1,15 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
+import PropTypes from "prop-types";
+
 import { SearchControlHeader } from './SearchControlHeader';
 
-export class DocumentHeaderComponent extends PureComponent {
-    render() {
-        return (<header className="document-header">
-            <SearchControlHeader></SearchControlHeader>
-        </header>);
-    }
-}
 
+export const DocumentHeaderComponent = ({onSearchClick}) => (
+    <header className="document-header">
+        <SearchControlHeader onSearchClick={onSearchClick}></SearchControlHeader>
+    </header>
+);
+
+DocumentHeaderComponent.propTypes = {
+    onSearchClick: PropTypes.func,
+};
