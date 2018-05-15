@@ -6,12 +6,15 @@ body{
     color: white;
 }
 
+.document-header {
+    background-color: black;
+}
+
 .document-header_item {
     padding: 0 50px;
 }
 
 .header-search-control {
-    background-color: black;
     padding-top: 50px;
 }
 
@@ -91,4 +94,16 @@ body{
 .description-movie-doc-header {
     display: flex;
     justify-content: space-between;
+}
+
+.description-movie-doc-header_image {
+    width: 250px;
+}
+
+.document-header-description__search-button{
+    text-align: right;
+}
+
+.description-movie-doc-header_text {
+    color: white;
 }

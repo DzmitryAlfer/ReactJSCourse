@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { DocumentHeaderComponent } from './header/DocumentHeaderComponent';
 import {DocumentBodyComponent} from './body/DocumentBodyComponent';
 import {DescriptionMovieDocHeader} from "./header/DescriptionMovieDocHeader";
+import {DescriptionMovieDocBody} from "./body/DescriptionMovieDocBody";
 
 export class DocumentComponent extends Component {
     constructor(props){
@@ -26,7 +27,10 @@ export class DocumentComponent extends Component {
                 <DocumentBodyComponent searchString={this.state.searchString} onItemClick={this.onItemClick}></DocumentBodyComponent>
             </React.Fragment>);
         } else {
-            return (<DescriptionMovieDocHeader movie={this.state.selectedItem}/>);
+            return (<React.Fragment>
+                <DescriptionMovieDocHeader movie={this.state.selectedItem}/>
+                <DescriptionMovieDocBody movie={this.state.selectedItem}/>
+            </React.Fragment>);
         }
 
     }
