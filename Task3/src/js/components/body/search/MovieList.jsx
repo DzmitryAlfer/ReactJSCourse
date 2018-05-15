@@ -10,6 +10,11 @@ export const MovieList = ({movies, onItemClick}) => {
     return movies.map(movie => <SearchResultItemComponent key={movie.id} movie={movie} onItemClick={() => {onItemClick(movie);}} />)
 };
 
+MovieList.defaultProps = {
+    movies: [],
+    onItemClick: () => {},
+};
+
 MovieList.propTypes = {
     movies: PropTypes.arrayOf(PropTypes.shape(MoviePropType)),
     onItemClick: PropTypes.func,

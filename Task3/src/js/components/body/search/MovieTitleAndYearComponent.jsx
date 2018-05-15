@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {TextComponent} from "../../TextComponent";
 
 export const MovieTitleAndYearComponent = ({title, year}) => (
     <div className="movie-title-and-year">
-        <span>{title}</span>
-        <span className="movie-year">{year}</span>
+        <TextComponent text={title}/>
+        <TextComponent text={year.toString()} className='movie-year'/>
     </div>
 );
 
