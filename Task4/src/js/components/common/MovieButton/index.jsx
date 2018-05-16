@@ -9,11 +9,12 @@ export const MovieButton = ({text, onButtonClick, containerClass, buttonClass}) 
 
 MovieButton.defaultProps = {
     text: 'SEARCH',
+    onButtonClick: () => {},
 };
 
 MovieButton.propTypes = {
     text: PropTypes.string.isRequired,
     containerClass: PropTypes.string,
     buttonClass: PropTypes.string,
-    onButtonClick: PropTypes.func,
+    onButtonClick: PropTypes.func.isRequired,
 };

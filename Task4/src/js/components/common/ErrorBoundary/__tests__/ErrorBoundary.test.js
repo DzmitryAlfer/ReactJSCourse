@@ -1,6 +1,6 @@
 import React from 'react';
 import Renderer from 'react-test-renderer';
-import ErrorBoundary from "../ErrorBoundary";
+import ErrorBoundary from "../";
 
 describe('ErrorBoundary', () => {
     test('Component render without exception', () => {
