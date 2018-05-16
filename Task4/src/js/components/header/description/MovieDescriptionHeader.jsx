@@ -1,6 +1,4 @@
 import React from 'react';
-
-import {TextComponent} from "../../common/TextComponent/TextComponent";
 import {TextInContainerComponent} from "../../common/TextInContainerComponent";
 
 export const MovieDescriptionHeader = ({movie}) => (

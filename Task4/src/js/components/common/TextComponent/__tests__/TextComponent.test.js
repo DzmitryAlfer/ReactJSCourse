@@ -1,6 +1,6 @@
 import React from 'react';
 import Renderer from 'react-test-renderer';
-import {TextComponent} from "../TextComponent";
+import {TextComponent} from "../index";
 
 describe('TextComponent', () => {
     test('Component render', () => {

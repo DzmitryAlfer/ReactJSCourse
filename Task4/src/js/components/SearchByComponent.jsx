@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextComponent } from './common/TextComponent/TextComponent';
+import { TextComponent } from './common/TextComponent';
 
 export class SearchByComponent extends React.Component {
     render() {
