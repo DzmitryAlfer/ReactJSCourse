@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieDescriptionHeader Component render 1`] = `
+<div
+  className="description-movie-doc-header"
+>
+  <div>
+    <img
+      className="description-movie-doc-header_image"
+      src="image.png"
+    />
+  </div>
+  <div
+    className="description-movie-doc-header_text"
+  >
+    <span>
+      TextInContainerComponent MOCK
+    </span>
+    <span>
+      TextInContainerComponent MOCK
+    </span>
+  </div>
+</div>
+`;

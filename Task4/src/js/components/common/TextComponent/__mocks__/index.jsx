@@ -1,3 +1,3 @@
 import React from 'react';
 
-export const TextComponent = ({text, className}) => (<span>TextComponent MOCK</span>);
+export const TextComponent = () => (<span>TextComponent MOCK</span>);
