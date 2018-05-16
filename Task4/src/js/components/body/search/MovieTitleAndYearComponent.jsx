@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {TextComponent} from "../../TextComponent";
+import {TextComponent} from "../../common/TextComponent/TextComponent";
 
 export const MovieTitleAndYearComponent = ({title, year}) => (
     <div className="movie-title-and-year">

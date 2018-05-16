@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {TextComponent} from "../../TextComponent";
+import {TextComponent} from "../../common/TextComponent/TextComponent";
 
 export const SearchResultsNumberOfItemsComponent = ({numberOfItems, author})=> (
     <div className="search-info_item">

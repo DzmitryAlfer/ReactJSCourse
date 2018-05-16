@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {TextComponent} from "../../TextComponent";
+import {TextComponent} from "../../common/TextComponent/TextComponent";
 
 
 export const FindYourMovieHeaderComponent = () => (
