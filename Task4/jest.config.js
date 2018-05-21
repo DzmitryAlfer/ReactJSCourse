@@ -8,5 +8,6 @@ module.exports = {
         "!**/release/**",
         "!**/jest.config.js",
         "!**/webpack.config.js",
-    ]
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/test-framework.config.js",
 };
