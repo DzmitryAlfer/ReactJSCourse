@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SearchResultsNumberOfItemsComponent } from './SearchResultsNumberOfItemsComponent';
-import { SearchResultsSortByComponent } from './SearchResultsSortByComponent';
+import { SearchResultsNumberOfItemsComponent } from '../SearchResultsNumberOfItemsComponent/index';
+import { SearchResultsSortByComponent } from '../SearchResultsSortByComponent/index';
 
 
 export const SearchInfoComponent = ({ numberOfItems, onSortBy }) => (
