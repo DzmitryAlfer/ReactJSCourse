@@ -27,8 +27,8 @@ export class SearchResultsSortByComponent extends PureComponent {
         return (
             <div className="search-info_item">
                 <span className="search-info_text">Sort by</span>
-                <button className={`sort-by_button${this.state.sortBy === SearchResultsSortByComponentState.RELEASE_DATE ? ' sort-by_button--selected' : ''}`} onClick={() => this.onSortBy(SearchResultsSortByComponentState.RELEASE_DATE)}>release date</button>
-                <button className={`sort-by_button${this.state.sortBy === SearchResultsSortByComponentState.RATING ? ' sort-by_button--selected' : ''}`} onClick={() => this.onSortBy(SearchResultsSortByComponentState.RATING)}>rating</button>
+                <button className={`release sort-by_button${this.state.sortBy === SearchResultsSortByComponentState.RELEASE_DATE ? ' sort-by_button--selected' : ''}`} onClick={() => this.onSortBy(SearchResultsSortByComponentState.RELEASE_DATE)}>release date</button>
+                <button className={`rating sort-by_button${this.state.sortBy === SearchResultsSortByComponentState.RATING ? ' sort-by_button--selected' : ''}`} onClick={() => this.onSortBy(SearchResultsSortByComponentState.RATING)}>rating</button>
           </div>);
     }
 }
