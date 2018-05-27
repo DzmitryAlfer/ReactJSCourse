@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import {SearchResultItemComponent} from "./SearchResultItemComponent";
-import {MoviePropType} from "../../../ProjectPropTypes/MoviePropType";
+import {SearchResultItemComponent} from "../SearchResultItemComponent/index";
+import {MoviePropType} from "../../../../ProjectPropTypes/MoviePropType";
 
 export const MovieList = ({movies, onItemClick}) => {
     if(!movies || movies.length === 0)
