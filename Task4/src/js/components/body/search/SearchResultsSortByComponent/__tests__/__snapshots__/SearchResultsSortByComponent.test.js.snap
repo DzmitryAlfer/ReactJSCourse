@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResultsSortByComponent Component render1 1`] = `
+<div
+  className="search-info_item"
+>
+  <span
+    className="search-info_text"
+  >
+    Sort by
+  </span>
+  <button
+    className="sort-by_button sort-by_button--selected"
+    onClick={[Function]}
+  >
+    release date
+  </button>
+  <button
+    className="sort-by_button"
+    onClick={[Function]}
+  >
+    rating
+  </button>
+</div>
+`;
