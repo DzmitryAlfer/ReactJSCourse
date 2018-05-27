@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
-import {MoviesDataSource} from "../../../services/api/MoviesDataSource";
-import {MovieList} from "./MovieList";
+import {MoviesDataSource} from "../../../../services/api/MoviesDataSource/index";
+import {MovieList} from "../MovieList";
 
 export class SearchResultByAuthorContainer extends PureComponent {
 

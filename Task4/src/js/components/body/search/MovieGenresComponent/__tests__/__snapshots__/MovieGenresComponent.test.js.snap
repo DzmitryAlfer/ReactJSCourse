@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieGenresComponent Component render 1`] = `
+<div
+  className="movie-genres"
+>
+  <span
+    className="movie-genres_item"
+  >
+    genre1
+  </span>
+  <span
+    className="movie-genres_item"
+  >
+    genre2
+  </span>
+  <span
+    className="movie-genres_item"
+  >
+    genre3
+  </span>
+</div>
+`;
