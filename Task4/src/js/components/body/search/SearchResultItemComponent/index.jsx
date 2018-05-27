@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {MoviePropType} from '../../../ProjectPropTypes/MoviePropType';
-import {SearchResultDescriptionComponent} from "./SearchResultDescriptionComponent";
+import {MoviePropType} from '../../../../ProjectPropTypes/MoviePropType';
+import {SearchResultDescriptionComponent} from "../SearchResultDescriptionComponent";
 
 export const SearchResultItemComponent = ({movie, onItemClick}) => (
     <div className="search-result_item">
