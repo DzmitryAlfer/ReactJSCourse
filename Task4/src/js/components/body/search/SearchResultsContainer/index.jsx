@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
-import { MoviesDataSource } from '../../../services/api/MoviesDataSource';
-import { SearchResultsComponent } from './SearchResultsComponent';
-import {SearchResultsSortByComponentState} from "./SearchResultsSortByComponent";
+import { MoviesDataSource } from '../../../../services/api/MoviesDataSource/index';
+import { SearchResultsComponent } from '../SearchResultsComponent/index';
+import {SearchResultsSortByComponentState} from "../SearchResultsSortByComponent/index";
 
 export class SearchResultsContainer extends PureComponent {
     constructor(props) {
