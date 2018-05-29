@@ -1,5 +1,5 @@
 import React from 'react';
-import {TextInContainerComponent} from "../../../common/TextInContainerComponent";
+import {TextInContainerComponent} from "../../common/TextInContainerComponent/index";
 
 export const MovieDescriptionHeader = ({movie}) => (
     <div className='description-movie-doc-header'>

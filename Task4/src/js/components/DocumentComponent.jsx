@@ -23,8 +23,8 @@ export class DocumentComponent extends Component {
     render() {
         if(!this.state.selectedItem){
             return (<React.Fragment>
-                <DocumentHeaderComponent onSearchClick={(searchString) => {this.setState({searchString: searchString})}}></DocumentHeaderComponent>
-                <DocumentBodyComponent searchString={this.state.searchString} onItemClick={this.onItemClick}></DocumentBodyComponent>
+                <DocumentHeaderComponent onSearchClick={(searchString) => {this.setState({searchString: searchString})}}/>
+                <DocumentBodyComponent searchString={this.state.searchString} onItemClick={this.onItemClick}/>
             </React.Fragment>);
         } else {
             return (<React.Fragment>

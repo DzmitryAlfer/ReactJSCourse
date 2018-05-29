@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import {MoviePropType} from "../../ProjectPropTypes/MoviePropType";
-import {MovieButton} from "../common/MovieButton";
-import {MovieDescriptionHeader} from "./description/MovieDescriptionHeader";
+import {MoviePropType} from "../../../ProjectPropTypes/MoviePropType";
+import {MovieButton} from "../../common/MovieButton";
+import {MovieDescriptionHeader} from "../MovieDescriptionHeader";
 
 export const DescriptionMovieDocHeader = ({movie}) => (
     <header className="document-header">
