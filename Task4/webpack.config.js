@@ -49,7 +49,7 @@ module.exports = function(env, options) {
         mode: isProduction ? 'production' : 'development',
         devtool: isProduction ? 'none' : 'source-map',
 
-        watch: true
+        watch: false
     };
 
     return config;
