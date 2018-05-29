@@ -22,7 +22,7 @@ export class SearchResultsComponent extends PureComponent {
                 </div>);
         }
 
-        return (<div>No films found</div>);
+        return (<div className='no-films-found'>No films found</div>);
     }
 }
 

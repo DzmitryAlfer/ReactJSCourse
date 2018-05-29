@@ -58,7 +58,9 @@ exports[`SearchResultsComponent Component render1 1`] = `
 `;
 
 exports[`SearchResultsComponent Component render2 1`] = `
-<div>
+<div
+  className="no-films-found"
+>
   No films found
 </div>
 `;

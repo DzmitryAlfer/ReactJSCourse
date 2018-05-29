@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "lint:scripts": "eslint src/**/*.js",
-    "api": "webpack-dev-server",
+    "api": "webpack-dev-server --port 9090",
     "watch": "webpack",
     "build:prod": "webpack -p",
     "test": "jest",
