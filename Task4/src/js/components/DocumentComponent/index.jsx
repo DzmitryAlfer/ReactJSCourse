@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { DocumentHeaderComponent } from './header/DocumentHeaderComponent';
-import {DocumentBodyComponent} from './body/DocumentBodyComponent';
-import {DescriptionMovieDocHeader} from "./header/DescriptionMovieDocHeader";
-import {DescriptionMovieDocBody} from "./body/DescriptionMovieDocBody";
+import { DocumentHeaderComponent } from '../header/DocumentHeaderComponent';
+import {DocumentBodyComponent} from '../body/DocumentBodyComponent';
+import {DescriptionMovieDocHeader} from "../header/DescriptionMovieDocHeader";
+import {DescriptionMovieDocBody} from "../body/DescriptionMovieDocBody";
 
 export class DocumentComponent extends Component {
     constructor(props){
