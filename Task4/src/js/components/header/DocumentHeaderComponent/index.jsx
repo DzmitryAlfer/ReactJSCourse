@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-import { SearchControlHeader } from './SearchControlHeader';
+import { SearchControlHeader } from '../SearchControlHeader';
 
 
 export const DocumentHeaderComponent = ({onSearchClick}) => (
@@ -10,6 +10,10 @@ export const DocumentHeaderComponent = ({onSearchClick}) => (
     </header>
 );
 
+DocumentHeaderComponent.defaultProps = {
+    onSearchClick: () => {}
+};
+
 DocumentHeaderComponent.propTypes = {
-    onSearchClick: PropTypes.func,
+    onSearchClick: PropTypes.func.isRequired,
 };

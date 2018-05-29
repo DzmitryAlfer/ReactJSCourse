@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DocumentHeaderComponent Component render 1`] = `
+<header
+  className="document-header"
+>
+  <span
+    onSearchClick={[Function]}
+  >
+    SearchControlHeader MOCK
+  </span>
+</header>
+`;

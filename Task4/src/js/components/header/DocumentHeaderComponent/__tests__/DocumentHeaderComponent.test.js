@@ -1,14 +1,14 @@
 import React from 'react';
 import Renderer from 'react-test-renderer';
-import {MovieDescriptionHeader} from "../index";
+import { DocumentHeaderComponent } from "../index";
 
-jest.mock('../../../common/TextInContainerComponent');
+jest.mock('../../SearchControlHeader');
 
-describe('MovieDescriptionHeader', () => {
+describe('DocumentHeaderComponent', () => {
     test('Component render', () => {
 
         const tree = Renderer.create(
-            <MovieDescriptionHeader movie={{poster_path:'image.png'}}/>
+            <DocumentHeaderComponent />
         ).toJSON();
 
         expect(tree).toMatchSnapshot();
