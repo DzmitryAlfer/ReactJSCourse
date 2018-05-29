@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 
-import {SearchResultsContainer} from './search/SearchResultsContainer';
-import {SearchInfoComponent} from './search/SearchInfoComponent';
+import {SearchResultsContainer} from '../search/SearchResultsContainer/index';
 
 export class DocumentBodyComponent extends PureComponent {
     render() {
