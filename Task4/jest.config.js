@@ -1,13 +1,10 @@
 module.exports = {
     verbose: true,
     collectCoverageFrom: [
-        "**/*.{js,jsx}",
-        "!**/node_modules/**",
-        "!**/coverage/**",
-        "!**/debug/**",
-        "!**/release/**",
-        "!**/jest.config.js",
-        "!**/webpack.config.js",
+        "**/src/**/*.{js,jsx}",
+        "!**/src/js/services/api/**",
+        "!**/src/js/index.js",
+
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/test-framework.config.js",
 };

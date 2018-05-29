@@ -1,4 +1,4 @@
-const MoviesDataSource = {
+export const MoviesDataSource = {
     getMovies() {
         return new Promise((resolve, reject) => {
             resolve({
@@ -145,5 +145,3 @@ const MoviesDataSource = {
         return this.getMovies();
     },
 };
-
-export default MoviesDataSource;
