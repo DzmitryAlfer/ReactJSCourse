@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResultsContainer Component render1 1`] = `
+<span
+  movies={Array []}
+  numberOfMovies={0}
+  onItemClick={undefined}
+  onSortBy={[Function]}
+>
+  TextComponent MOCK
+</span>
+`;

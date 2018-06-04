@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DescriptionMovieDocHeader Component render 1`] = `
+<header
+  className="document-header"
+>
+  <span
+    containerClass="document-header-description__search-button"
+    onButtonClick={[Function]}
+    text="Search"
+  >
+    MovieButton MOCK
+  </span>
+  <span
+    movie={
+      Object {
+        "budget": 923000,
+        "genres": Array [
+          "Adventure",
+          "Comedy",
+          "Drama",
+        ],
+        "id": 962,
+        "overview": "A lone prospector ventures into Alaska looking for gold. He gets mixed up with some burly characters and falls in love with the beautiful Georgia. He tries to win her heart with his singular charm.",
+        "poster_path": "https://image.tmdb.org/t/p/w500/eQRFo1qwRREYwj47Yoe1PisgOle.jpg",
+        "release_date": "1925-06-25",
+        "revenue": 2500000,
+        "runtime": 95,
+        "tagline": "The World's Greatest Laughing Picture!",
+        "title": "The Gold Rush",
+        "vote_average": 7.8,
+        "vote_count": 411,
+      }
+    }
+  >
+    MovieDescriptionHeader MOCK
+  </span>
+</header>
+`;

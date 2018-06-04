@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DocumentBodyComponent Component render 1`] = `
+<main
+  className="main-body"
+>
+  <span
+    onItemClick={undefined}
+    searchString={undefined}
+  >
+    SearchResultsContainer MOCK
+  </span>
+</main>
+`;

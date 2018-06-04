@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorBoundary Component render without exception 1`] = `
+<span>
+  This text should be rendered
+</span>
+`;

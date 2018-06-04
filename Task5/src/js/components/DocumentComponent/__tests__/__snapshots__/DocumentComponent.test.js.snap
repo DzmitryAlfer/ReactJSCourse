@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DocumentComponent Component render 1`] = `
+Array [
+  <span
+    onSearchClick={[Function]}
+  >
+    DocumentHeaderComponent MOCK
+  </span>,
+  <span
+    onItemClick={[Function]}
+    searchString=""
+  >
+    DocumentBodyComponent MOCK
+  </span>,
+]
+`;

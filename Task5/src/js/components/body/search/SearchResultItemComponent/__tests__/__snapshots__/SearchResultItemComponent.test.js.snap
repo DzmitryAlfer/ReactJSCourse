@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResultItemComponent Component render 1`] = `
+<div
+  className="search-result_item"
+>
+  <button
+    onClick={[Function]}
+  >
+    <img
+      className="search-result-image"
+      src="https://image.tmdb.org/t/p/w500/eQRFo1qwRREYwj47Yoe1PisgOle.jpg"
+    />
+  </button>
+  <div
+    className="search-result-description"
+  >
+    <div
+      className="movie-title-and-year"
+    >
+      <span
+        className=""
+      >
+        The Gold Rush
+      </span>
+      <span
+        className="movie-year"
+      >
+        1925
+      </span>
+    </div>
+    <div
+      className="movie-genres"
+    >
+      <span
+        className="movie-genres_item"
+      >
+        Adventure
+      </span>
+      <span
+        className="movie-genres_item"
+      >
+        Comedy
+      </span>
+      <span
+        className="movie-genres_item"
+      >
+        Drama
+      </span>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`movie prop type checker movie prop type checker 1`] = `
+Object {
+  "budget": [Function],
+  "genres": [Function],
+  "id": [Function],
+  "overview": [Function],
+  "poster_path": [Function],
+  "release_date": [Function],
+  "revenue": [Function],
+  "runtime": [Function],
+  "tagline": [Function],
+  "title": [Function],
+  "vote_average": [Function],
+  "vote_count": [Function],
+}
+`;
