@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'react-redux'
 import { MoviesDataSource } from '../../../../services/api/MoviesDataSource/index';
 import { SearchResultsComponent } from '../SearchResultsComponent/index';
 import {SearchResultsSortByComponentState} from "../SearchResultsSortByComponent/index";
 
-export class SearchResultsContainer extends PureComponent {
+class SearchResultsContainer extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,13 +20,16 @@ export class SearchResultsContainer extends PureComponent {
     }
 
     componentDidMount() {
-        MoviesDataSource.getMovies().then((searchResults) => {
+        /*MoviesDataSource.getMovies().then((searchResults) => {
             this.setState({ searchResults });
-        });
+        });*/
     }
 
     render() {
-        const filteredResults = this.state.searchResults.data.filter((movie) => !this.props.searchString || this.props.searchString === "" ? true : movie.title.toLowerCase() === this.props.searchString.toLowerCase());
+        const { filteredResults } = this.props;
+        return <SearchResultsComponent movies={filteredResults} numberOfMovies={2} onSortBy={this.onSortBy}/>;
+
+        /*const filteredResults = this.state.searchResults.data.filter((movie) => !this.props.searchString || this.props.searchString === "" ? true : movie.title.toLowerCase() === this.props.searchString.toLowerCase());
 
         if (this.state.sortBy === SearchResultsSortByComponentState.RELEASE_DATE) {
             filteredResults.sort((a,b) => {
@@ -39,6 +43,16 @@ export class SearchResultsContainer extends PureComponent {
             });
         }
 
-        return <SearchResultsComponent movies={filteredResults} numberOfMovies={this.state.searchResults.total} onItemClick={this.props.onItemClick} onSortBy={this.onSortBy}/>;
+        return <SearchResultsComponent movies={filteredResults} numberOfMovies={this.state.searchResults.total} onItemClick={this.props.onItemClick} onSortBy={this.onSortBy}/>;*/
     }
 };
+
+function mapStateToProps(state) {
+    const { searchResults } = state;
+
+    return {
+        filteredResults : searchResults ? searchResults.data : null
+    }
+}
+
+export default connect (mapStateToProps)(SearchResultsContainer);

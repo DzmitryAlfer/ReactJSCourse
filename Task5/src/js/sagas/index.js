@@ -3,7 +3,7 @@ import * as actions from '../actions'
 import {api} from "../services/api";
 
 function* fetchMovies() {
-    const movies = yield call(api.getMovies)
+    const movies = yield call(api.getMovies);
     yield put(actions.movies.receiveMovies(movies));
 }
 
@@ -12,5 +12,5 @@ export function* watchFetchMovies() {
 }
 
 export default function* rootSaga() {
-    yield all([fork(watchFetchMovies)])
+    yield all([fork(fetchMovies), fork(watchFetchMovies)])
 }
