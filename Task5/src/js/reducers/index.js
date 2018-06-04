@@ -7,9 +7,8 @@ function moviesReducer(state = { data: [], total: 0 }, action){
 
     switch (action.type){
         case RECEIVE_MOVIES:
-            return {
-                ...state
-                , searchResults : action.movies
+            return {...state
+                ,...action.movies
             }
     }
 

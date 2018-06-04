@@ -48,10 +48,10 @@ class SearchResultsContainer extends PureComponent {
 };
 
 function mapStateToProps(state) {
-    const { searchResults } = state;
+    const { moviesReducer } = state;
 
     return {
-        filteredResults : searchResults ? searchResults.data : null
+        filteredResults : moviesReducer.data
     }
 }
 
