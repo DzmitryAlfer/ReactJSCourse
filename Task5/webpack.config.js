@@ -8,7 +8,7 @@ module.exports = function(env, options) {
 
     const config = {
         context: path.resolve(__dirname, 'src'),
-        entry: './js/index.js',
+        entry: ['babel-polyfill', './js/index.js'],
 
         output: {
             path: isProduction ? path.resolve(__dirname, 'release') : path.resolve(__dirname, 'debug'),
