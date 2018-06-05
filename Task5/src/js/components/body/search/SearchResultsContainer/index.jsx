@@ -1,22 +1,23 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux'
-import { MoviesDataSource } from '../../../../services/api/MoviesDataSource/index';
+import * as actions from '../../../../actions/index'
 import { SearchResultsComponent } from '../SearchResultsComponent/index';
 import {SearchResultsSortByComponentState} from "../SearchResultsSortByComponent/index";
 
 class SearchResultsContainer extends PureComponent {
     constructor(props) {
         super(props);
-        this.state = {
+        /*this.state = {
             searchResults: { data: [], total: 0 },
             sortBy : SearchResultsSortByComponentState.RELEASE_DATE
-        };
+        };*/
 
         this.onSortBy = this.onSortBy.bind(this);
     }
 
     onSortBy(sortBy = SearchResultsSortByComponentState.RELEASE_DATE) {
-        this.setState({sortBy: sortBy});
+        this.props.dispatch(actions.movies.sortMovies(sortBy));
+        //this.setState({sortBy: sortBy});
     }
 
     componentDidMount() {
@@ -47,12 +48,28 @@ class SearchResultsContainer extends PureComponent {
     }
 };
 
-function mapStateToProps(state) {
+function sortMovies(movies, sortBy){
+    if (sortBy === SearchResultsSortByComponentState.RELEASE_DATE) {
+        movies.sort((a,b) => {
+            return (a.release_date > b.release_date)
+                ? 1 : (a.release_date > b.release_date) ? -1 : 0;
+        });
+    } else {
+        movies.sort((a,b) => {
+            return (a.vote_count > b.vote_count)
+                ? 1 : (a.vote_count > b.vote_count) ? -1 : 0;
+        });
+    }
+
+    return movies;
+}
+
+const mapStateToProps = (state) => {
     const { moviesReducer } = state;
 
     return {
-        filteredResults : moviesReducer.data
+        filteredResults : sortMovies(moviesReducer.data, moviesReducer.sortBy)
     }
-}
+};
 
 export default connect (mapStateToProps)(SearchResultsContainer);
