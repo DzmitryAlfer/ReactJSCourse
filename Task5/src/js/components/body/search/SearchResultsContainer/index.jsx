@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import * as actions from '../../../../actions/index'
 import { SearchResultsComponent } from '../SearchResultsComponent/index';
 import {SearchResultsSortByComponentState} from "../SearchResultsSortByComponent/index";
+import {sortMovies} from "../../../../selectors";
 
 class SearchResultsContainer extends PureComponent {
     constructor(props) {
@@ -48,7 +49,7 @@ class SearchResultsContainer extends PureComponent {
     }
 };
 
-function sortMovies(movies, sortBy){
+/*function sortMovies(movies, sortBy){
     if (sortBy === SearchResultsSortByComponentState.RELEASE_DATE) {
         movies.sort((a,b) => {
             return (a.release_date > b.release_date)
@@ -62,13 +63,13 @@ function sortMovies(movies, sortBy){
     }
 
     return movies;
-}
+}*/
 
 const mapStateToProps = (state) => {
     const { moviesReducer } = state;
 
     return {
-        filteredResults : sortMovies(moviesReducer.data, moviesReducer.sortBy)
+        filteredResults : sortMovies(moviesReducer)
     }
 };
 
