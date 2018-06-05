@@ -6,18 +6,13 @@ import { SearchInfoComponent } from '../SearchInfoComponent/index';
 import {MovieList} from "../MovieList/index";
 
 export class SearchResultsComponent extends PureComponent {
-
-    constructor(props){
-        super(props);
-    }
-
     render() {
         const { movies, numberOfMovies } = this.props;
 
         if (movies && movies.length > 0) {
             return (
               <div className="search-results">
-                  <SearchInfoComponent numberOfItems={numberOfMovies} onSortBy={this.props.onSortBy} />
+                  <SearchInfoComponent numberOfItems={numberOfMovies} />
                   <MovieList movies={movies} onItemClick={this.props.onItemClick}/>
                 </div>);
         }
