@@ -1,4 +1,3 @@
-export const SEARCH_MOVIES = 'SEARCH_MOVIES';
 export const RECEIVE_MOVIES = 'RECEIVE_MOVIES';
 export const RECEIVE_RELATED_MOVIES = 'RECEIVE_RELATED_MOVIES';
 export const FETCH_MOVIES = 'FETCH_MOVIES';
@@ -14,11 +13,10 @@ function action(type, payload = {}) {
 }
 
 export const app = {
-    setError: (hasError) => action(SET_ERROR, hasError)
+    setError: (hasError) => action(SET_ERROR, {hasError})
 };
 
 export const movies = {
-    searchMovies: (searchQuery) => action(SEARCH_MOVIES, {searchQuery}),
     fetchMovies: (searchQuery) => action(FETCH_MOVIES, {searchQuery}),
     fetchRelatedMovies: (movie) => action(FETCH_RELATED_MOVIES, {movie}),
     receiveMovies: movies => action(RECEIVE_MOVIES, {movies}),

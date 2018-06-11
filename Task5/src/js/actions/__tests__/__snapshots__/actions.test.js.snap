@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions app.setError 1`] = `
+Object {
+  "hasError": true,
+  "type": "SET_ERROR",
+}
+`;
+
+exports[`actions movies.fetchMovies 1`] = `
+Object {
+  "searchQuery": "query",
+  "type": "FETCH_MOVIES",
+}
+`;
+
+exports[`actions movies.fetchRelatedMovies 1`] = `
+Object {
+  "movie": Object {
+    "id": 1,
+  },
+  "type": "FETCH_RELATED_MOVIES",
+}
+`;
+
+exports[`actions movies.receiveMovies 1`] = `
+Object {
+  "movies": Array [
+    Object {
+      "id": 1,
+    },
+    Object {
+      "id": 2,
+    },
+  ],
+  "type": "RECEIVE_MOVIES",
+}
+`;
+
+exports[`actions movies.receiveRelatedMovies 1`] = `
+Object {
+  "movies": Array [
+    Object {
+      "id": 1,
+    },
+    Object {
+      "id": 2,
+    },
+  ],
+  "type": "RECEIVE_RELATED_MOVIES",
+}
+`;
+
+exports[`actions movies.searchByMovies 1`] = `
+Object {
+  "searchBy": "genres",
+  "type": "SEARCH_BY_MOVIES",
+}
+`;
+
+exports[`actions movies.sortMovies 1`] = `
+Object {
+  "sortBy": "vote_average",
+  "type": "SORT_MOVIES",
+}
+`;
