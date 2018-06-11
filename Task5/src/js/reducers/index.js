@@ -1,14 +1,13 @@
 import {combineReducers} from "redux";
 
 import {FETCH_MOVIES, RECEIVE_MOVIES, SORT_MOVIES, SEARCH_BY_MOVIES} from '../actions'
-import {SearchByButtonsComponentStates} from "../components/header/search/SearchByButtonsComponent";
-import {SortBy} from "../common";
+import {SearchBy, SortBy} from "../common";
 
 const initialState = {
     data: [],
     total: 0,
     sortBy : SortBy.RELEASE_DATE,
-    searchBy: SearchByButtonsComponentStates.TITLE
+    searchBy: SearchBy.TITLE
 };
 
 function moviesReducer(state = initialState, action){

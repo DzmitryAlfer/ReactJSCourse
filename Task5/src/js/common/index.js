@@ -9,6 +9,6 @@ export const SortOrder = Object.freeze({
 });
 
 export const SearchBy = Object.freeze({
-    Title: 'title',
-    Genres: 'genres',
+    TITLE: 'title',
+    GENRES: 'genres',
 });

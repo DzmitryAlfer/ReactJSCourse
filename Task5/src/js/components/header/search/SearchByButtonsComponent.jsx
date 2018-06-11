@@ -3,21 +3,17 @@ import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import {sortMovies} from "../../../selectors";
 import * as actions from "../../../actions";
-
-export const SearchByButtonsComponentStates = Object.freeze({
-    TITLE: 'title',
-    DIRECTOR: 'director',
-});
+import {SearchBy} from "../../../common";
 
 class SearchByButtonsComponent extends PureComponent {
     render() {
         return (
             <div className="search-by-control_item">
                 <span className="header-text">SEARCH BY</span>
-                <button className={`header-text search-by-control_button${this.props.searchBy === SearchByButtonsComponentStates.TITLE
-                    ? ' search-by-control_button--selected' : ''}`} onClick={() => this.props.onSearchBy(SearchByButtonsComponentStates.TITLE)}>TITLE</button>
-                <button className={`header-text search-by-control_button${this.props.searchBy === SearchByButtonsComponentStates.DIRECTOR
-                    ? ' search-by-control_button--selected' : ''}`} onClick={() => this.props.onSearchBy(SearchByButtonsComponentStates.DIRECTOR)}>DIRECTOR</button>
+                <button className={`header-text search-by-control_button${this.props.searchBy === SearchBy.TITLE
+                    ? ' search-by-control_button--selected' : ''}`} onClick={() => this.props.onSearchBy(SearchBy.TITLE)}>TITLE</button>
+                <button className={`header-text search-by-control_button${this.props.searchBy === SearchBy.GENRES
+                    ? ' search-by-control_button--selected' : ''}`} onClick={() => this.props.onSearchBy(SearchBy.GENRES)}>GENRES</button>
             </div>
         );
     }
