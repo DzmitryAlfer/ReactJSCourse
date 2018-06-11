@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect'
-import {SearchResultsSortByComponentState} from "../components/body/search/SearchResultsSortByComponent";
+import {SortBy} from "../common";
 
 const getMovies = (state) => state.data;
 const getSortBy = (state) => state.sortBy;
@@ -13,7 +13,7 @@ export const sortMovies = createSelector(
         }
 
         switch (sortBy) {
-            case SearchResultsSortByComponentState.RATING:
+            case SortBy.RATING:
                 movies = movies.sort((a,b) => {
                     return (a.vote_average > b.vote_average)
                         ? -1 : (a.vote_average < b.vote_average) ? 1 : 0;
