@@ -6,7 +6,6 @@ exports[`DescriptionMovieDocHeader Component render 1`] = `
 >
   <span
     containerClass="document-header-description__search-button"
-    onButtonClick={[Function]}
     text="Search"
   >
     MovieButton MOCK
