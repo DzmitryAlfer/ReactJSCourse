@@ -7,9 +7,9 @@ const initialQueryParameters = {
 };
 
 export const api = {
-    getMovies(queryParameters = initialQueryParameters) {
+    getMovies(queryParameters) {
         const url = new URL("http://react-cdp-api.herokuapp.com/movies");
-        const params = queryParameters;
+        const params = queryParameters ? {...initialQueryParameters, ...queryParameters} : initialQueryParameters;
 
         Object.keys(params).forEach((key) => {
             const val = params[key];
