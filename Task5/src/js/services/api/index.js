@@ -7,11 +7,6 @@ const initialQueryParameters = {
 
 export const api = {
     getMovies(queryParameters = initialQueryParameters) {
-        //return MoviesDataSource2.getMovies();
-
-        /*const url = 'http://react-cdp-api.herokuapp.com/movies';
-        return fetch(url).then((resp) => resp.json());*/
-
         const url = new URL("http://react-cdp-api.herokuapp.com/movies");
         const params = queryParameters;
 

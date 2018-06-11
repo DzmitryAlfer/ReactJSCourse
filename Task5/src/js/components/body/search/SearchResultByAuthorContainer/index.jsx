@@ -1,26 +1,29 @@
 import React, {PureComponent} from 'react';
-import {MoviesDataSource} from "../../../../services/api/MoviesDataSource";
+import * as actions from "../../../../actions";
 import {MovieList} from "../MovieList";
+import {connect} from "react-redux";
 
-export class SearchResultByAuthorContainer extends PureComponent {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            searchResults: { data: [], total: 0 },
-        };
-    }
+class SearchResultByGenreContainer extends PureComponent {
 
     componentDidMount() {
-        MoviesDataSource.getMoviesByAuthor(this.props.author).then((searchResults) => {
-            this.setState({searchResults});
-        });
+        this.props.dispatch(actions.movies.fetchRelatedMovies(this.props.movie))
     }
 
     render() {
         return (<div className='search-results'>
-                <MovieList movies={this.state.searchResults.data}/>
+                <MovieList movies={this.props.relatedMovies}/>
             </div>
         );
     }
 }
+
+const mapStateToProps = state => {
+    const { movieReducer } = state;
+
+    return {
+        movie : movieReducer.movie,
+        relatedMovies: movieReducer.relatedMovies
+    }
+};
+
+export default connect (mapStateToProps)(SearchResultByGenreContainer);

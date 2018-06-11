@@ -1,9 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { SearchResultItemComponent } from '../SearchResultItemComponent/index';
 import { MoviePropType } from '../../../../ProjectPropTypes/MoviePropType';
-import { SearchInfoComponent } from '../SearchInfoComponent/index';
-import {MovieList} from "../MovieList/index";
+import { SearchInfoComponent } from '../SearchInfoComponent';
+import {MovieList} from "../MovieList";
 
 export class SearchResultsComponent extends PureComponent {
     render() {

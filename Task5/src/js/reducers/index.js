@@ -1,17 +1,44 @@
 import {combineReducers} from "redux";
 
-import {FETCH_MOVIES, RECEIVE_MOVIES, SORT_MOVIES, SEARCH_BY_MOVIES} from '../actions'
+import {RECEIVE_MOVIES, SORT_MOVIES, SEARCH_BY_MOVIES, RECEIVE_RELATED_MOVIES, SET_ERROR} from '../actions'
 import {SearchBy, SortBy} from "../common";
 
-const initialState = {
+const moviesReducerInitialState = {
     data: [],
     total: 0,
     sortBy : SortBy.RELEASE_DATE,
     searchBy: SearchBy.TITLE
 };
 
-function moviesReducer(state = initialState, action){
-    console.log(`reducer. Action: ${action.type}`);
+const movieReducerInitialState = {
+    movie: null,
+    relatedMovies: {},
+};
+
+function appReducer(state = {hasError: false}, action) {
+    switch (action.type){
+        case SET_ERROR:
+            return {...state
+                , hasError : action.hasError
+            }
+    }
+}
+
+function movieReducer(state = movieReducerInitialState, action) {
+    console.log(`movie reducer. Action: ${action.type}`);
+
+    switch (action.type){
+        case RECEIVE_RELATED_MOVIES:
+            return {...state
+                , relatedMovies: action.movies
+            }
+    }
+
+    return state;
+}
+
+function moviesReducer(state = moviesReducerInitialState, action){
+    console.log(`movies reducer. Action: ${action.type}`);
 
     switch (action.type){
         case RECEIVE_MOVIES:
@@ -34,7 +61,7 @@ function moviesReducer(state = initialState, action){
 }
 
 const rootReducer = combineReducers({
-    moviesReducer
+    moviesReducer, movieReducer
 });
 
 export default rootReducer;
