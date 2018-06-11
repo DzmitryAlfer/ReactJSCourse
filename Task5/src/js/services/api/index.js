@@ -1,7 +1,7 @@
-import {SortBy, SortOrder} from "../../common";
+import {SearchBy, SortBy, SortOrder} from "../../common";
 
 const initialQueryParameters = {
-    search: null,
+    searchBy: SearchBy.TITLE,
     sortBy: SortBy.RELEASE_DATE,
     sortOrder: SortOrder.DESC,
 };

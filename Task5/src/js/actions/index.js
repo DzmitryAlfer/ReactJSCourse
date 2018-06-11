@@ -18,8 +18,8 @@ export const app = {
 };
 
 export const movies = {
-    searchMovies: searchQuery => action(SEARCH_MOVIES, {searchQuery}),
-    fetchMovies: () => action(FETCH_MOVIES),
+    searchMovies: (searchQuery) => action(SEARCH_MOVIES, {searchQuery}),
+    fetchMovies: (searchQuery) => action(FETCH_MOVIES, {searchQuery}),
     fetchRelatedMovies: (movie) => action(FETCH_RELATED_MOVIES, {movie}),
     receiveMovies: movies => action(RECEIVE_MOVIES, {movies}),
     receiveRelatedMovies: (movies) => action(RECEIVE_RELATED_MOVIES, {movies}),

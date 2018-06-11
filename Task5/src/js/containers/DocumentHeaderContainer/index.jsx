@@ -10,4 +10,10 @@ class DocumentHeaderContainer extends PureComponent {
     }
 }
 
-export default connect (() => {return {};}, (dispatch) => {return {onSearchClick: searchString => dispatch(actions.movies.searchMovies(searchString))}; })(DocumentHeaderContainer);
+export default connect (
+    ({ moviesReducer }) => { return {
+        sortBy: moviesReducer.sortBy,
+        searchBy: moviesReducer.searchBy,
+    };}
+    , (dispatch) => {return {onSearchClick: searchString => dispatch(actions.movies.fetchMovies(searchString))}; })
+(DocumentHeaderContainer);

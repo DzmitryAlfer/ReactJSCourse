@@ -6,6 +6,7 @@ import {SearchBy, SortBy} from "../common";
 const moviesReducerInitialState = {
     data: [],
     total: 0,
+    searchQuery: null,
     sortBy : SortBy.RELEASE_DATE,
     searchBy: SearchBy.TITLE
 };
@@ -22,6 +23,8 @@ function appReducer(state = {hasError: false}, action) {
                 , hasError : action.hasError
             }
     }
+
+    return state;
 }
 
 function movieReducer(state = movieReducerInitialState, action) {
@@ -61,7 +64,7 @@ function moviesReducer(state = moviesReducerInitialState, action){
 }
 
 const rootReducer = combineReducers({
-    moviesReducer, movieReducer
+    appReducer, moviesReducer, movieReducer
 });
 
 export default rootReducer;

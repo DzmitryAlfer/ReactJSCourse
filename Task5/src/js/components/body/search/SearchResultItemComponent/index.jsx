@@ -9,7 +9,7 @@ export const SearchResultItemComponent = ({movie, onItemClick}) => (
             <img className="search-result-image" src={movie.poster_path}/>
         </button>
         <SearchResultDescriptionComponent title={movie.title} year={(new Date(movie.release_date)).getFullYear()}
-                                          genres={movie.genres}/>
+                                          genres={movie.genres} rating={movie.vote_average}/>
     </div>
 );
 
