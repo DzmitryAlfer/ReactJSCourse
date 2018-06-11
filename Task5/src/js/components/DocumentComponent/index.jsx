@@ -17,7 +17,7 @@ export class DocumentComponent extends Component {
     }
 
     onItemClick(movie) {
-        this.setState({selectedItem: movie});
+        //this.setState({selectedItem: movie}); //TODO: add navigation here
     }
 
     render() {

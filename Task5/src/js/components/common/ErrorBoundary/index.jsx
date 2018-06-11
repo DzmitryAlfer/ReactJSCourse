@@ -1,25 +1,27 @@
 import React, { PureComponent } from 'react';
+import * as actions from "../../../actions";
+import {connect} from "react-redux";
 
-export default class ErrorBoundary extends PureComponent {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            hasError: false
-        };
-    }
-
-    componentDidCatch(error, info) {   
-        this.setState({
-            hasError: true
-        });
+class ErrorBoundary extends PureComponent {
+    componentDidCatch(error, info) {
+        this.props.dispatch(actions.app.setError(true));
     }
 
     render(){
-        if(this.state.hasError) {
+        if(this.props.hasError) {
             return (<h1>Ooops, Something went wrong</h1>);
         }
 
         return this.props.children;
     }
 }
+
+const mapStateToProps = state => {
+    const { appReducer } = state;
+
+    return {
+        hasError : appReducer.hasError
+    }
+};
+
+export default connect (mapStateToProps)(ErrorBoundary);
