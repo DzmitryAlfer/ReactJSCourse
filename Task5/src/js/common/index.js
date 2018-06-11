@@ -7,3 +7,8 @@ export const SortOrder = Object.freeze({
     ASC: 'asc',
     DESC: 'desc',
 });
+
+export const SearchBy = Object.freeze({
+    Title: 'title',
+    Genres: 'genres',
+});

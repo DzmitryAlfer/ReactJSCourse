@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {SearchByButtonsComponent} from "./SearchByButtonsComponent";
+import SearchByButtonsComponent from "./SearchByButtonsComponent";
 import {MovieButton} from "../../common/MovieButton";
 
 export const SearchByControl = ({onSearchByClick, onSearchClick}) => (
