@@ -1,6 +1,7 @@
 import {SortBy, SortOrder} from "../../common";
 
 const initialQueryParameters = {
+    search: null,
     sortBy: SortBy.RELEASE_DATE,
     sortOrder: SortOrder.DESC,
 };
@@ -10,9 +11,18 @@ export const api = {
         const url = new URL("http://react-cdp-api.herokuapp.com/movies");
         const params = queryParameters;
 
-        Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+        Object.keys(params).forEach((key) => {
+            const val = params[key];
+            if(val) {
+                url.searchParams.append(key, val)
+            }
+        });
 
-        return fetch(url.toString()).then((resp) => resp.json());
+        const strUrl = url.toString();
+
+        console.log(`make GET request: ${strUrl}`);
+
+        return fetch(strUrl).then((resp) => resp.json());
     },
 
     getMoviesByAuthor({author}) {
