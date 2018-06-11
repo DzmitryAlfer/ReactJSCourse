@@ -6,7 +6,6 @@ exports[`SearchResultsComponent Component render1 1`] = `
 >
   <span
     numberOfItems={2}
-    onSortBy={undefined}
   >
     SearchInfoComponent MOCK
   </span>

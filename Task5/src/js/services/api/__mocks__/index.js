@@ -1,4 +1,4 @@
-export const MoviesDataSource = {
+export const api = {
     getMovies() {
         return new Promise((resolve, reject) => {
             resolve({
@@ -139,9 +139,5 @@ export const MoviesDataSource = {
                 "limit": 10
             });
         });
-    },
-
-    getMoviesByAuthor({author}) {
-        return this.getMovies();
     },
 };

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {DocumentBodyComponent} from '../body/DocumentBodyComponent';
-//import {DescriptionMovieDocHeader} from "../header/DescriptionMovieDocHeader";
-//import {DescriptionMovieDocBody} from "../body/DescriptionMovieDocBody";
+import {DescriptionMovieDocHeader} from "../header/DescriptionMovieDocHeader";
+import {DescriptionMovieDocBody} from "../body/DescriptionMovieDocBody";
 import DocumentHeaderContainer from '../../containers/DocumentHeaderContainer'
 
 export class DocumentComponent extends Component {
@@ -21,12 +21,17 @@ export class DocumentComponent extends Component {
     }*/
 
     render() {
-        //if(!this.state.selectedItem){
+        return (<React.Fragment>
+            <DocumentHeaderContainer />
+            <DocumentBodyComponent/>
+        </React.Fragment>);
+
+        /*if(!this.state.selectedItem){
             return (<React.Fragment>
                 <DocumentHeaderContainer />
                 <DocumentBodyComponent searchString={this.state.searchString} onItemClick={this.onItemClick}/>
             </React.Fragment>);
-        /*} else {
+        } else {
             return (<React.Fragment>
                 <DescriptionMovieDocHeader movie={this.state.selectedItem}/>
                 <DescriptionMovieDocBody movie={this.state.selectedItem}/>

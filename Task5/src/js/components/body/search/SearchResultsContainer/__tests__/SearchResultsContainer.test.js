@@ -3,7 +3,7 @@ import Renderer from 'react-test-renderer';
 import {SearchResultsContainer} from '../index'
 
 jest.mock('../../SearchResultsComponent');
-jest.mock('../../../../../services/api/MoviesDataSource');
+jest.mock('../../../../../services/api');
 
 describe('SearchResultsContainer', () => {
     test('Component render1', () => {
@@ -17,8 +17,8 @@ describe('SearchResultsContainer', () => {
 
     /*test('Component render2', () => {
 
-        jest.unmock('../../../../../services/api/MoviesDataSource');
-        jest.mock('../../../../../services/api/MoviesDataSource', () => {
+        jest.unmock('../../../../../services/api');
+        jest.mock('../../../../../services/api', () => {
             return {
                 getMovies() {
                     return new Promise((resolve, reject) => {

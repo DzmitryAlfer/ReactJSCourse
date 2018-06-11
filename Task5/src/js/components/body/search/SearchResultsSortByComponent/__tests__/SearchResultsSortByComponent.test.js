@@ -1,7 +1,8 @@
 import React from 'react';
 import Renderer from 'react-test-renderer';
-import {SearchResultsSortByComponent, SearchResultsSortByComponentState} from '../index'
+import SearchResultsSortByComponent from '../'
 import {mount} from 'enzyme';
+import {SortBy} from "../../../../../common";
 
 describe('SearchResultsSortByComponent', () => {
     test('Component render1', () => {
@@ -20,7 +21,7 @@ describe('SearchResultsSortByComponent', () => {
         ));
 
         wrapper.find('.rating').simulate('click');
-        expect(onButtonClick).toHaveBeenCalledWith(SearchResultsSortByComponentState.RATING);
+        expect(onButtonClick).toHaveBeenCalledWith(SortBy.RATING);
 
         wrapper.find('.release').simulate('click');
         expect(onButtonClick).toHaveBeenCalledWith(SearchResultsSortByComponentState.RELEASE_DATE);

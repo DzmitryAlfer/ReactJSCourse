@@ -3,7 +3,7 @@ import Renderer from 'react-test-renderer';
 import {DescriptionMovieDocBody} from "../";
 
 jest.mock('../../../common/TextInContainerComponent');
-jest.mock('../../search/SearchResultByAuthorContainer');
+jest.mock('../../search/SearchResultByGenreContainer');
 
 describe('DescriptionMovieDocBody', () => {
     test('Component render', () => {

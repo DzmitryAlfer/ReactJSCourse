@@ -28,6 +28,13 @@ exports[`SearchResultItemComponent Component render 1`] = `
       >
         1925
       </span>
+      <div>
+        <span
+          className=""
+        >
+          Rating: 7.8
+        </span>
+      </div>
     </div>
     <div
       className="movie-genres"
