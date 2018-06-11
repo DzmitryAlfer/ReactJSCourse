@@ -4,8 +4,6 @@ exports[`SearchResultsContainer Component render1 1`] = `
 <span
   movies={Array []}
   numberOfMovies={0}
-  onItemClick={undefined}
-  onSortBy={[Function]}
 >
   TextComponent MOCK
 </span>

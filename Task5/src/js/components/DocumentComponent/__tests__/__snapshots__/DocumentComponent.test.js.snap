@@ -7,10 +7,7 @@ Array [
   >
     DocumentHeaderComponent MOCK
   </span>,
-  <span
-    onItemClick={[Function]}
-    searchString=""
-  >
+  <span>
     DocumentBodyComponent MOCK
   </span>,
 ]

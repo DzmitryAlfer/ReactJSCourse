@@ -1,13 +1,17 @@
 import React from 'react';
 import Renderer from 'react-test-renderer';
 import {DescriptionMovieDocBody} from "../";
+import { Provider } from 'react-redux'
+import configureStore from "../../../../store/configureStore";
 
+const store = configureStore();
 jest.mock('../../../common/TextInContainerComponent');
 jest.mock('../../search/SearchResultByGenreContainer');
 
 describe('DescriptionMovieDocBody', () => {
     test('Component render', () => {
         const tree = Renderer.create(
+            <Provider store={store}>
             <DescriptionMovieDocBody movie={{
                 "id": 962,
                 "title": "The Gold Rush",
@@ -22,6 +26,7 @@ describe('DescriptionMovieDocBody', () => {
                 "genres": ["Adventure", "Comedy", "Drama"],
                 "runtime": 95
             }}/>
+            </Provider>
         ).toJSON();
 
         expect(tree).toMatchSnapshot();
