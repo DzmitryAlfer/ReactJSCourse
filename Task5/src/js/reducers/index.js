@@ -8,6 +8,7 @@ import {
     SET_ERROR,
     FETCH_RELATED_MOVIES
 } from '../actions'
+
 import {SearchBy, SortBy} from "../common";
 
 const moviesReducerInitialState = {
@@ -23,7 +24,7 @@ const movieReducerInitialState = {
     relatedMovies: [],
 };
 
-function appReducer(state = {hasError: false}, action) {
+export function appReducer(state = {hasError: false}, action) {
     switch (action.type){
         case SET_ERROR:
             return {...state
@@ -34,7 +35,7 @@ function appReducer(state = {hasError: false}, action) {
     return state;
 }
 
-function movieReducer(state = movieReducerInitialState, action) {
+export function movieReducer(state = movieReducerInitialState, action) {
     console.log(`movie reducer. Action: ${action.type}`);
 
     switch (action.type){
@@ -48,7 +49,7 @@ function movieReducer(state = movieReducerInitialState, action) {
     return state;
 }
 
-function moviesReducer(state = moviesReducerInitialState, action){
+export function moviesReducer(state = moviesReducerInitialState, action){
     console.log(`movies reducer. Action: ${action.type}`);
 
     switch (action.type){
