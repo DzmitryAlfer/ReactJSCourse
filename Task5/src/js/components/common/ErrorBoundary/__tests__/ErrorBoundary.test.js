@@ -4,7 +4,7 @@ import ErrorBoundary from "../";
 import { Provider } from 'react-redux'
 import configureStore from "../../../../store/configureStore";
 
-const store = configureStore();
+const {store} = configureStore();
 
 describe('ErrorBoundary', () => {
     test('Component render without exception', () => {

@@ -4,7 +4,7 @@ import { SearchResultsNumberOfItemsComponent } from '../SearchResultsNumberOfIte
 import  SearchResultsSortByComponent from '../SearchResultsSortByComponent/index';
 
 
-export const SearchInfoComponent = ({ numberOfItems, onSortBy }) => (
+export const SearchInfoComponent = ({ numberOfItems }) => (
     <div className="document-header_item search-info">
         <SearchResultsNumberOfItemsComponent numberOfItems={numberOfItems} />
         <SearchResultsSortByComponent />

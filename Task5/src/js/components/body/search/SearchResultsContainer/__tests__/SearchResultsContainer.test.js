@@ -7,7 +7,7 @@ import configureStore from "../../../../../store/configureStore";
 jest.mock('../../SearchResultsComponent');
 jest.mock('../../../../../services/api');
 
-const store = configureStore();
+const {store} = configureStore();
 
 describe('SearchResultsContainer', () => {
     test('Component render1', () => {

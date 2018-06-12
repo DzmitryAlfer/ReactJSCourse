@@ -1,6 +1,13 @@
 import {combineReducers} from "redux";
 
-import {RECEIVE_MOVIES, SORT_MOVIES, SEARCH_BY_MOVIES, RECEIVE_RELATED_MOVIES, SET_ERROR} from '../actions'
+import {
+    RECEIVE_MOVIES,
+    SORT_MOVIES,
+    SEARCH_BY_MOVIES,
+    RECEIVE_RELATED_MOVIES,
+    SET_ERROR,
+    FETCH_RELATED_MOVIES
+} from '../actions'
 import {SearchBy, SortBy} from "../common";
 
 const moviesReducerInitialState = {
@@ -13,7 +20,7 @@ const moviesReducerInitialState = {
 
 const movieReducerInitialState = {
     movie: null,
-    relatedMovies: {},
+    relatedMovies: [],
 };
 
 function appReducer(state = {hasError: false}, action) {
@@ -31,6 +38,7 @@ function movieReducer(state = movieReducerInitialState, action) {
     console.log(`movie reducer. Action: ${action.type}`);
 
     switch (action.type){
+        case FETCH_RELATED_MOVIES: //TODO: Add to saga when apply navigation and second page
         case RECEIVE_RELATED_MOVIES:
             return {...state
                 , relatedMovies: action.movies

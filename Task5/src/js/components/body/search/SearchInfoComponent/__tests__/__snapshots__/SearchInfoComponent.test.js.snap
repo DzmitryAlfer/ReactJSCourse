@@ -7,8 +7,5 @@ exports[`SearchInfoComponent Component render 1`] = `
   <span>
     TextComponent MOCK
   </span>
-  <span>
-    TextComponent MOCK
-  </span>
 </div>
 `;
