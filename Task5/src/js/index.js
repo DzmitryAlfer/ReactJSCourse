@@ -5,11 +5,11 @@ import Root from "./containers/Root";
 import configureStore from "./store/configureStore";
 import rootSaga from './sagas'
 
-const store = configureStore();
+const {store, persistor} = configureStore();
 store.runSaga(rootSaga);
 
 document.addEventListener('DOMContentLoaded', function(){
     ReactDom.render(
-        <Root store={store} history={null} routes={null}/>,
+        <Root store={store} persistor={persistor} history={null} routes={null}/>,
         document.getElementById('root'));
 });
