@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInfoComponent Component render 1`] = `
+<div
+  className="document-header_item search-info"
+>
+  <span>
+    TextComponent MOCK
+  </span>
+</div>
+`;

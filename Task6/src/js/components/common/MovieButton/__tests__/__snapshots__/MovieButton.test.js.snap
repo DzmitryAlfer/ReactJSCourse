@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieButton Component render 1`] = `
+<div
+  className="container-class"
+>
+  <button
+    className="button-class"
+    onClick={[Function]}
+  >
+    some-text
+  </button>
+</div>
+`;

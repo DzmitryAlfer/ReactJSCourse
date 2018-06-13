@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieList Component render 1`] = `
+Array [
+  <span>
+    TextComponent MOCK
+  </span>,
+  <span>
+    TextComponent MOCK
+  </span>,
+]
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInContainerComponent Component render 1`] = `
+<div
+  className="container-class"
+>
+  <span>
+    TextComponent MOCK
+  </span>
+</div>
+`;

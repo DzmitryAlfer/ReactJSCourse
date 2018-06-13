@@ -1,0 +1,109 @@
+body{
+    margin: 0px;
+}
+
+.header-text {
+    color: white;
+}
+
+.document-header {
+    background-color: black;
+}
+
+.document-header_item {
+    padding: 0 50px;
+}
+
+.header-search-control {
+    padding-top: 50px;
+}
+
+.header-search-control_item {
+    padding-bottom: 10px;
+}
+
+.header-search-control_input-search{
+    background-color: black;
+    color: white;
+    width: 100%;
+    border: solid 1px white;
+    height: 30px;
+    border-bottom: solid 3px  red;
+}
+
+.search-by-control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-by-control_button {
+    background-color: dimgrey;
+    border: 0px;
+}
+
+.search-by-control_button--selected {
+    background-color: red;
+}
+
+/* Search Info */
+
+.search-info {
+    padding-top: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-info_text{
+    color: black;
+}
+
+.sort-by_button {
+    background-color: white;
+    border: 0px;
+    color: black;
+}
+
+.sort-by_button--selected {
+    color: red;
+}
+
+/* Main */
+.main-body{
+    padding: 20px 0px;
+}
+
+/* Search results */
+.search-results{
+
+}
+
+.search-result_item {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.search-result-image{
+    width: 250px;
+}
+
+.movie-year {
+    border: 1px solid black;
+}
+
+.description-movie-doc-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description-movie-doc-header_image {
+    width: 250px;
+}
+
+.document-header-description__search-button{
+    text-align: right;
+}
+
+.description-movie-doc-header_text {
+    color: white;
+}

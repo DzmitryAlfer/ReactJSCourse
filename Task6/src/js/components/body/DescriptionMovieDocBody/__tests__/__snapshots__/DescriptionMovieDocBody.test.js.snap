@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DescriptionMovieDocBody Component render 1`] = `
+<main
+  className="main-body"
+>
+  <span>
+    TextInContainerComponent MOCK
+  </span>
+</main>
+`;
