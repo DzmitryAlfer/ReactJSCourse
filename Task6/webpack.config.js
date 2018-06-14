@@ -37,6 +37,10 @@ module.exports = function(env, options) {
             ]
         },
 
+        devServer: {
+            historyApiFallback: true
+        },
+
         plugins: [
             new ExtractTextPlugin('[name].css'),
             new HtmlWebpackPlugin({

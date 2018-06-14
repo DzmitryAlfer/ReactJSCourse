@@ -19,5 +19,6 @@ export function* watchFetchMovies() {
 
 /* istanbul ignore next */
 export default function* rootSaga() {
-    yield all([fork(fetchMovies), fork(watchFetchMovies)])
+    //yield all([fork(fetchMovies), fork(watchFetchMovies)])
+    yield all([fork(watchFetchMovies)])
 }

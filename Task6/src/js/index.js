@@ -10,6 +10,6 @@ store.runSaga(rootSaga);
 
 document.addEventListener('DOMContentLoaded', function(){
     ReactDom.render(
-        <Root store={store} persistor={persistor} history={null} routes={null}/>,
+        <Root store={store} persistor={persistor}/>,
         document.getElementById('root'));
 });

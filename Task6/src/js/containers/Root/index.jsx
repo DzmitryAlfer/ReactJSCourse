@@ -1,29 +1,28 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import PropTypes from "prop-types";
-import {DocumentComponent} from "../../components/DocumentComponent";
 import { PersistGate } from 'redux-persist/integration/react'
-/*import { Router, RouterContext } from 'react-router'*/
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import {withHomePageTemplate} from '../../components/pages/HomePageTemplate'
+import {EmptyResultStatePage} from "../../components/pages/EmptyResultStatePage";
+import {Page404} from "../../components/pages/Page404";
 
 export default class Root extends Component {
     render() {
-        const { store, persistor, history, routes, type, renderProps } = this.props;
+        const { store, persistor} = this.props;
 
         return (
             <Provider store={store}>
                 <PersistGate loading={null} persistor={persistor}>
-                    <DocumentComponent/>
+                    <Router>
+                        <Switch>
+                            <Route exact path='/' component={withHomePageTemplate(EmptyResultStatePage)}/>
+                            <Route exact path='/search' component={withHomePageTemplate(EmptyResultStatePage)}/>
+                            <Route path='*' component={Page404}/>
+                        </Switch>
+                    </Router>
                 </PersistGate>
             </Provider>
-            /*<Provider store={store}>
-                <div>
-                    {{ type === 'server'
-                        ? <RouterContext {...renderProps} />
-                        : <Router history={history} routes={routes} />
-                    }
-                    <DevTools />}
-                </div>
-            </Provider>*/
         )
     }
 }
