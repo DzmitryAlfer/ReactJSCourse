@@ -7,6 +7,7 @@ import {withHomePageTemplate} from '../../components/pages/HomePageTemplate'
 import {EmptyResultStatePage} from "../../components/pages/EmptyResultStatePage";
 import {Page404} from "../../components/pages/Page404";
 import {SearchResultsPage} from "../../components/pages/SearchResultsPage";
+import {FilmDescriptionPage} from "../../components/pages/FilmDescriptionPage";
 
 export default class Root extends Component {
     render() {
@@ -18,8 +19,8 @@ export default class Root extends Component {
                     <Router>
                         <Switch>
                             <Route exact path='/' component={withHomePageTemplate(EmptyResultStatePage)}/>
-                            {/*<Route exact path='/search' component={withHomePageTemplate(SearchResultsPage)}/>*/}
                             <Route path='/search/:searchQuery?' component={withHomePageTemplate(SearchResultsPage)}/>
+                            <Route path='/film/:movieId' component={FilmDescriptionPage}/>
                             <Route path='*' component={Page404}/>
                         </Switch>
                     </Router>

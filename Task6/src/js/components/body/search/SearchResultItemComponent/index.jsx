@@ -9,9 +9,6 @@ export const SearchResultItemComponent = ({movie, onItemClick}) => (
         <Link to={{pathname:`/film/${movie.id}`}}>
             <img className="search-result-image" src={movie.poster_path}/>
         </Link>
-        {/*<button onClick={() => onItemClick(movie.id)}>
-            <img className="search-result-image" src={movie.poster_path}/>
-        </button>*/}
         <SearchResultDescriptionComponent title={movie.title} year={(new Date(movie.release_date)).getFullYear()}
                                           genres={movie.genres} rating={movie.vote_average}/>
     </div>

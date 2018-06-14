@@ -1,4 +1,4 @@
-import { createSelector } from 'reselect'
+import { createSelector, defaultMemoize } from 'Reselect'
 import {SortBy} from "../common";
 
 const getMovies = (state) => state.data;
@@ -31,3 +31,15 @@ export const sortMovies = createSelector(
         return [...movies];
     }
 );
+
+export const getMovie = createSelector(
+        [getMovies, state => parseInt(state.movieId, 10)],
+        (movies, movieId) => {
+            if(!movies){
+                return null;
+            }
+            debugger;
+            return movies.find((m) => m.id === movieId);
+        }
+    );
+
