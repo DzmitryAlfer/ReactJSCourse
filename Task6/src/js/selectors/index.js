@@ -38,7 +38,7 @@ export const getMovie = createSelector(
             if(!movies){
                 return null;
             }
-            debugger;
+
             return movies.find((m) => m.id === movieId);
         }
     );
