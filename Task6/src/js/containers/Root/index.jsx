@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import {withHomePageTemplate} from '../../components/pages/HomePageTemplate'
 import {EmptyResultStatePage} from "../../components/pages/EmptyResultStatePage";
 import {Page404} from "../../components/pages/Page404";
+import {SearchResultsPage} from "../../components/pages/SearchResultsPage";
 
 export default class Root extends Component {
     render() {
@@ -18,6 +19,7 @@ export default class Root extends Component {
                         <Switch>
                             <Route exact path='/' component={withHomePageTemplate(EmptyResultStatePage)}/>
                             <Route exact path='/search' component={withHomePageTemplate(EmptyResultStatePage)}/>
+                            <Route path='/search/:searchQuery' component={withHomePageTemplate(SearchResultsPage)}/>
                             <Route path='*' component={Page404}/>
                         </Switch>
                     </Router>

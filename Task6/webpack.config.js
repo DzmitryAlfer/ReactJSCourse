@@ -12,7 +12,8 @@ module.exports = function(env, options) {
 
         output: {
             path: isProduction ? path.resolve(__dirname, 'release') : path.resolve(__dirname, 'debug'),
-            filename: 'js/index.js'
+            publicPath: '/',
+            filename: 'js/index.js',
         },
 
         resolve: {

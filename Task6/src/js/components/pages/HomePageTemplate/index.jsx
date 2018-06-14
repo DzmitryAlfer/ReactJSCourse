@@ -14,7 +14,7 @@ export function withHomePageTemplate(WrappedComponent) {
     return (props) => {
         return(
             <HomePageTemplate {...props}>
-                <WrappedComponent/>
+                <WrappedComponent {...props}/>
             </HomePageTemplate>
         );
     };
