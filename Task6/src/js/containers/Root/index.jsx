@@ -18,8 +18,8 @@ export default class Root extends Component {
                     <Router>
                         <Switch>
                             <Route exact path='/' component={withHomePageTemplate(EmptyResultStatePage)}/>
-                            <Route exact path='/search' component={withHomePageTemplate(EmptyResultStatePage)}/>
-                            <Route path='/search/:searchQuery' component={withHomePageTemplate(SearchResultsPage)}/>
+                            {/*<Route exact path='/search' component={withHomePageTemplate(SearchResultsPage)}/>*/}
+                            <Route path='/search/:searchQuery?' component={withHomePageTemplate(SearchResultsPage)}/>
                             <Route path='*' component={Page404}/>
                         </Switch>
                     </Router>

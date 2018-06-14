@@ -11,7 +11,7 @@ export class SearchControlHeader extends PureComponent {
         return (
             <div className="document-header_item header-search-control">
 				<FindYourMovieHeaderComponent/>
-				<SearchBox inputControlRef={(el) => {this.searchInput = el;}}/>
+				<SearchBox text={this.props.initialSearchString} inputControlRef={(el) => {this.searchInput = el;}}/>
 				<SearchByControl onSearchClick={() => {this.props.onSearchClick(this.searchInput.value)}}/>
 			</div>
         );
@@ -20,8 +20,10 @@ export class SearchControlHeader extends PureComponent {
 
 SearchControlHeader.defaultProps = {
     onSearchClick: () => {},
+    initialSearchString: '',
 };
 
 SearchControlHeader.propTypes = {
     onSearchClick: PropTypes.func.isRequired,
+    initialSearchString: PropTypes.string,
 };

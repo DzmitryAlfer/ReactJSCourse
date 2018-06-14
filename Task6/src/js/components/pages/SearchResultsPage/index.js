@@ -1,7 +1,9 @@
 import React from 'react';
+import SearchResultsContainer from "../../body/search/SearchResultsContainer";
+
 
 export const SearchResultsPage = (props) => {
     return (
-        <p>Search Results page: {props.match.params.searchQuery}.</p>
+        <SearchResultsContainer/>
     );
 };

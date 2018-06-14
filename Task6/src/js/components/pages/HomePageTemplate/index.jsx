@@ -4,8 +4,10 @@ import DocumentHeaderContainer from '../../../containers/DocumentHeaderContainer
 export const HomePageTemplate = (props) => {
     return (
         <React.Fragment>
-            <DocumentHeaderContainer/>
-            {props.children}
+            <DocumentHeaderContainer {...props}/>
+            <main className="main-body">
+                {props.children}
+            </main>
         </React.Fragment>
     );
 };

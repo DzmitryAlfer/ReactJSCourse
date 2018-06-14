@@ -4,9 +4,27 @@ import {DocumentHeaderComponent} from "../../components/header/DocumentHeaderCom
 import * as actions from "../../actions";
 
 class DocumentHeaderContainer extends PureComponent {
+
+    constructor(props, context){
+        super(props, context);
+
+        this.searchString = '';
+        this.isNeedFetchData = this.props.match && this.props.match.params.hasOwnProperty('searchQuery');
+
+        if(this.isNeedFetchData) {
+            this.searchString = this.props.match.params.searchQuery;
+        }
+    }
+
+    componentDidMount(){
+        if(this.isNeedFetchData){
+            this.props.onSearchClick(this.searchString);
+        }
+    }
+
     render() {
         return (
-            <DocumentHeaderComponent onSearchClick={(searchString) => this.props.onSearchClick(searchString)}/>);
+            <DocumentHeaderComponent initialSearchString={this.searchString} onSearchClick={(searchString) => this.props.onSearchClick(searchString)}/>);
     }
 }
 

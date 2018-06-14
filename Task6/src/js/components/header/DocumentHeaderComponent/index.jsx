@@ -4,16 +4,18 @@ import PropTypes from "prop-types";
 import { SearchControlHeader } from '../SearchControlHeader';
 
 
-export const DocumentHeaderComponent = ({onSearchClick}) => (
+export const DocumentHeaderComponent = ({onSearchClick, initialSearchString}) => (
     <header className="document-header">
-        <SearchControlHeader onSearchClick={onSearchClick}></SearchControlHeader>
+        <SearchControlHeader initialSearchString={initialSearchString} onSearchClick={onSearchClick}></SearchControlHeader>
     </header>
 );
 
 DocumentHeaderComponent.defaultProps = {
-    onSearchClick: () => {}
+    onSearchClick: () => {},
+    initialSearchString: '',
 };
 
 DocumentHeaderComponent.propTypes = {
     onSearchClick: PropTypes.func.isRequired,
+    initialSearchString: PropTypes.string,
 };
