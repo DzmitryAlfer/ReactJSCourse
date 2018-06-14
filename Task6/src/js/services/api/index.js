@@ -24,4 +24,7 @@ export const api = {
 
         return fetch(strUrl).then((resp) => resp.json());
     },
+    getMovie({movieId}){
+        return fetch(`http://react-cdp-api.herokuapp.com/movies/${movieId}`).then((resp) => resp.json());
+    },
 };

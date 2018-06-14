@@ -6,7 +6,7 @@ import SearchResultByGenreContainer from "../search/SearchResultByGenreContainer
 
 export const DescriptionMovieDocBody = ({movie}) => (
     <main className="main-body">
-        <TextInContainerComponent text={`Films by ${movie.tagline}`}/>
+        <TextInContainerComponent text={`Genres: ${movie.genres.map(g => ` ${g}`)}`}/>
         <SearchResultByGenreContainer movie={movie}/>
     </main>
 );

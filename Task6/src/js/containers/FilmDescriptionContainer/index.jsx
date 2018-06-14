@@ -1,19 +1,33 @@
 import React, {PureComponent} from "react";
+import * as actions from '../../actions'
 import { connect } from 'react-redux'
-import {getMovie} from "../../selectors";
 import {DescriptionMovieDocHeader} from "../../components/header/DescriptionMovieDocHeader";
+import {DescriptionMovieDocBody} from "../../components/body/DescriptionMovieDocBody";
 
 class FilmDescriptionContainer extends PureComponent {
+
+    componentDidMount() {
+        if(this.props.movieId){
+            this.props.dispatch(actions.movies.fetchMovie(this.props.movieId));
+        }
+    }
+
     render(){
-        return (<DescriptionMovieDocHeader movie={this.props.movie}/>);
+        if(!this.props.movie)
+            return null;
+
+        return (<React.Fragment>
+                <DescriptionMovieDocHeader movie={this.props.movie}/>
+                <DescriptionMovieDocBody movie={this.props.movie}/>
+            </React.Fragment>);
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
-    const { moviesReducer } = state;
+const mapStateToProps = (state) => {
+    const { movieReducer } = state;
 
     return {
-        movie : getMovie({...moviesReducer, movieId: ownProps.movieId}),
+        movie : movieReducer.movie,
     }
 };
 

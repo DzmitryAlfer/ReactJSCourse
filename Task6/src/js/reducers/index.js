@@ -5,8 +5,7 @@ import {
     SORT_MOVIES,
     SEARCH_BY_MOVIES,
     RECEIVE_RELATED_MOVIES,
-    SET_ERROR,
-    FETCH_RELATED_MOVIES
+    SET_ERROR, RECEIVE_MOVIE,
 } from '../actions'
 
 import {SearchBy, SortBy} from "../common";
@@ -21,7 +20,7 @@ const moviesReducerInitialState = {
 
 const movieReducerInitialState = {
     movie: null,
-    relatedMovies: [],
+    relatedMovies: {},
 };
 
 export function appReducer(state = {hasError: false}, action) {
@@ -38,12 +37,16 @@ export function appReducer(state = {hasError: false}, action) {
 export function movieReducer(state = movieReducerInitialState, action) {
     console.log(`movie reducer. Action: ${action.type}`);
 
-    switch (action.type){
-        case FETCH_RELATED_MOVIES: //TODO: Add to saga when apply navigation and second page
+    switch (action.type) {
         case RECEIVE_RELATED_MOVIES:
             return {...state
                 , relatedMovies: action.movies
-            }
+            };
+
+        case RECEIVE_MOVIE:
+            return{...state
+                , movie: action.movie
+            };
     }
 
     return state;
