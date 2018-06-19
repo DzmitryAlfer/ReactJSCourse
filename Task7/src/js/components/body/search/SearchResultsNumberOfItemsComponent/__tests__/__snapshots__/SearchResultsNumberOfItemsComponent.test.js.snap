@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResultsNumberOfItemsComponent Component render1 1`] = `
+<div
+  className="search-info_item"
+>
+  <span
+    className="search-info_text"
+  >
+    2 movies found
+  </span>
+</div>
+`;
+
+exports[`SearchResultsNumberOfItemsComponent Component render2 1`] = `
+<div
+  className="search-info_item"
+>
+  <span
+    className="search-info_text"
+  >
+    Films by Benjamin Franklin
+  </span>
+</div>
+`;

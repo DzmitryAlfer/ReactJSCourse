@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`movie array prop type checker movie array prop type checker 1`] = `
+Object {
+  "data": [Function],
+  "limit": [Function],
+  "offset": [Function],
+  "total": [Function],
+}
+`;
