@@ -28,14 +28,3 @@ export const sortMovies = createSelector(
         return [...sortedMovies];
     },
 );
-
-export const getMovie = createSelector(
-    [getMovies, state => parseInt(state.movieId, 10)],
-    (movies, movieId) => {
-        if (!movies) {
-            return null;
-        }
-
-        return movies.find(m => m.id === movieId);
-    },
-);
