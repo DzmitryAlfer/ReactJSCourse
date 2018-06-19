@@ -1,4 +1,4 @@
-import {MoviesPropTypes} from "../MoviesPropTypes";
+import { MoviesPropTypes } from '../MoviesPropTypes';
 
 describe('movie array prop type checker', () => {
     test('movie array prop type checker', () => {

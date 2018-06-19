@@ -5,7 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "lint:scripts": "eslint src/**/*.js",
+    "lint:scripts": "eslint src/**/*.js --fix",
     "api": "webpack-dev-server --port 9090",
     "watch": "webpack",
     "build:prod": "webpack -p",

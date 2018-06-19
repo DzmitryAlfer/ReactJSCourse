@@ -1,4 +1,4 @@
-import PropType from 'prop-types'
+import PropType from 'prop-types';
 
 export const MoviePropType = {
     id: PropType.number.isRequired,
@@ -12,5 +12,5 @@ export const MoviePropType = {
     budget: PropType.number,
     revenue: PropType.number,
     genres: PropType.arrayOf(PropType.string),
-    runtime: PropType.any
+    runtime: PropType.any,
 };

@@ -1,27 +1,24 @@
 import React from 'react';
 import Renderer from 'react-test-renderer';
-import { Provider } from 'react-redux'
-import SearchResultsContainer from '../'
-import configureStore from "../../../../../store/configureStore";
+import { Provider } from 'react-redux';
+import SearchResultsContainer from '../';
+import configureStore from '../../../../../store/configureStore';
 
 jest.mock('../../SearchResultsComponent');
 jest.mock('../../../../../services/api');
 
-const {store} = configureStore();
+const { store } = configureStore();
 
 describe('SearchResultsContainer', () => {
     test('Component render1', () => {
-
-        const tree = Renderer.create(
-            <Provider store={store}>
-                <SearchResultsContainer />
-            </Provider>
-        ).toJSON();
+        const tree = Renderer.create(<Provider store={store}>
+            <SearchResultsContainer />
+        </Provider>).toJSON();
 
         expect(tree).toMatchSnapshot();
     });
 
-    /*test('Component render2', () => {
+    /* test('Component render2', () => {
 
         jest.unmock('../../../../../services/api');
         jest.mock('../../../../../services/api', () => {
@@ -48,5 +45,5 @@ describe('SearchResultsContainer', () => {
         ).toJSON();
 
         expect(tree).toMatchSnapshot();
-    });*/
+    }); */
 });

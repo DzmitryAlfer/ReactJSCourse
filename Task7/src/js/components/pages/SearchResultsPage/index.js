@@ -1,9 +1,7 @@
 import React from 'react';
-import SearchResultsContainer from "../../body/search/SearchResultsContainer";
+import SearchResultsContainer from '../../body/search/SearchResultsContainer';
 
 
-export const SearchResultsPage = (props) => {
-    return (
-        <SearchResultsContainer/>
-    );
-};
+export const SearchResultsPage = props => (
+    <SearchResultsContainer />
+);

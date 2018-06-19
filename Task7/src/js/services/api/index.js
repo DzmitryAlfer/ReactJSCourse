@@ -20,8 +20,6 @@ export const api = {
 
         const strUrl = url.toString();
 
-        console.log(`make GET request: ${strUrl}`);
-
         return fetch(strUrl).then(resp => resp.json());
     },
     getMovie({ movieId }) {
