@@ -30,14 +30,12 @@ export function appReducer(state = { hasError: false }, action) {
                 ...state,
                 hasError: action.hasError,
             };
+        default:
+            return state;
     }
-
-    return state;
 }
 
 export function movieReducer(state = movieReducerInitialState, action) {
-    console.log(`movie reducer. Action: ${action.type}`);
-
     switch (action.type) {
         case RECEIVE_RELATED_MOVIES:
             return {
@@ -50,14 +48,13 @@ export function movieReducer(state = movieReducerInitialState, action) {
                 ...state,
                 movie: action.movie,
             };
-    }
 
-    return state;
+        default:
+            return state;
+    }
 }
 
 export function moviesReducer(state = moviesReducerInitialState, action) {
-    console.log(`movies reducer. Action: ${action.type}`);
-
     switch (action.type) {
         case RECEIVE_MOVIES:
             return {
@@ -76,9 +73,10 @@ export function moviesReducer(state = moviesReducerInitialState, action) {
                 ...state,
                 searchBy: action.searchBy,
             };
-    }
 
-    return state;
+        default:
+            return state;
+    }
 }
 
 const rootReducer = combineReducers({
