@@ -25,7 +25,7 @@ describe('DescriptionMovieDocBody', () => {
                 genres: ['Adventure', 'Comedy', 'Drama'],
                 runtime: 95,
             }}
-          />
+            />
         </Provider>).toJSON();
 
         expect(tree).toMatchSnapshot();
