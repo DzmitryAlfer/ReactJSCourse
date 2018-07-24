@@ -2,13 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = function(env, options) {
+module.exports = function (env, options) {
     const isProduction = options.mode === 'production';
     //console.error(isProduction ? "run webpack in production mode" : "run webpack in development mode");
 
     const config = {
         context: path.resolve(__dirname, 'src'),
-        entry: ['babel-polyfill', './js/index.js'],
+        entry: ['babel-polyfill', './js/index.jsx'],
 
         output: {
             path: isProduction ? path.resolve(__dirname, 'release') : path.resolve(__dirname, 'debug'),

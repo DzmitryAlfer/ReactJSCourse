@@ -16,7 +16,7 @@ Object {
 
 exports[`actions movies.fetchRelatedMovies 1`] = `
 Object {
-  "movie": Object {
+  "genres": Object {
     "id": 1,
   },
   "type": "FETCH_RELATED_MOVIES",

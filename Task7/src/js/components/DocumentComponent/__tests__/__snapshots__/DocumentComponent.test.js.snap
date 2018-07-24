@@ -3,6 +3,7 @@
 exports[`DocumentComponent Component render 1`] = `
 Array [
   <span
+    initialSearchString=""
     onSearchClick={[Function]}
   >
     DocumentHeaderComponent MOCK

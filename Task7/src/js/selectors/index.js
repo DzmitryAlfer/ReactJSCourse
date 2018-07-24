@@ -1,4 +1,4 @@
-import { createSelector } from 'Reselect';
+import { createSelector } from 'reselect';
 import { SortBy } from '../common';
 
 const getMovies = state => state.data;

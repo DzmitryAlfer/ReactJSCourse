@@ -5,6 +5,7 @@ exports[`DocumentHeaderComponent Component render 1`] = `
   className="document-header"
 >
   <span
+    initialSearchString=""
     onSearchClick={[Function]}
   >
     SearchControlHeader MOCK
