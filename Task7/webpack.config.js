@@ -2,9 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = function (env, options) {
+module.exports = function webpackConfig(env, options) {
     const isProduction = options.mode === 'production';
-    //console.error(isProduction ? "run webpack in production mode" : "run webpack in development mode");
+    console.error(isProduction ? 'run webpack in production mode' : 'run webpack in development mode');
 
     const config = {
         context: path.resolve(__dirname, 'src'),
