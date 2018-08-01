@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = function webpackConfig(env, options) {
     const isProduction = options.mode === 'production';
+
     console.error(isProduction ? 'run webpack in production mode' : 'run webpack in development mode');
 
     const config = {
@@ -17,29 +18,29 @@ module.exports = function webpackConfig(env, options) {
         },
 
         resolve: {
-            extensions: ['.js', '.jsx', '.json']
+            extensions: ['.js', '.jsx', '.json'],
         },
 
-        module:{
-            rules:[
+        module: {
+            rules: [
                 {
                     test: /\.(js|jsx)$/,
                     exclude: /node_modules/,
-                    use: ['babel-loader']
+                    use: ['babel-loader'],
                 },
                 {
                     test: /\.css$/,
-                    use: ['style-loader', 'css-loader']
+                    use: ['style-loader', 'css-loader'],
                     // use: ExtractTextPlugin.extract({
                     //   fallback: "style-loader",
                     //   use: "css-loader"
                     // })
-                }
-            ]
+                },
+            ],
         },
 
         devServer: {
-            historyApiFallback: true
+            historyApiFallback: true,
         },
 
         plugins: [
@@ -47,14 +48,14 @@ module.exports = function webpackConfig(env, options) {
             new HtmlWebpackPlugin({
                 title: 'Task2',
                 hash: true,
-                template: './index.html'
+                template: './index.html',
             }),
         ],
 
         mode: isProduction ? 'production' : 'development',
         devtool: isProduction ? 'none' : 'source-map',
 
-        watch: true
+        watch: true,
     };
 
     return config;
