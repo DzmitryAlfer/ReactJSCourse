@@ -1,12 +1,11 @@
 const path = require('path');
 //  const webpack = require('webpack');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     context: path.resolve(__dirname, '../src'),
-    entry: ['babel-polyfill', './js/index.jsx'],
 
     output: {
         publicPath: '/',
@@ -37,11 +36,11 @@ module.exports = {
 
     plugins: [
         new ExtractTextPlugin('[name].css'),
-        new HtmlWebpackPlugin({
+        /*new HtmlWebpackPlugin({
             title: 'Task7',
             hash: true,
             template: './index.html',
-        }),
+        }),*/
     ],
 
     //  remove below

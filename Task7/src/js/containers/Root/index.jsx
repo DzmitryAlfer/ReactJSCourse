@@ -11,12 +11,12 @@ import {FilmDescriptionPage} from "../../components/pages/FilmDescriptionPage";
 
 export default class Root extends Component {
     render() {
-        const { Router, store, persistor} = this.props;
+        const { Router, store, persistor, location, context} = this.props;
 
         return (
             <Provider store={store}>
                 <PersistGate loading={null} persistor={persistor}>
-                    <Router>
+                    <Router context={context}>
                         <Switch>
                             <Route exact path='/' component={withHomePageTemplate(EmptyResultStatePage)}/>
                             <Route path='/search/:searchQuery?' component={withHomePageTemplate(SearchResultsPage)}/>
@@ -31,7 +31,8 @@ export default class Root extends Component {
 }
 
 Root.propTypes = {
-    store: PropTypes.object.isRequired,
-    /*history: PropTypes.object.isRequired,
-    routes: PropTypes.node.isRequired*/
+    store: PropTypes.object,
+    context: PropTypes.object,
+    Router: PropTypes.func,
+    location: PropTypes.string,
 };

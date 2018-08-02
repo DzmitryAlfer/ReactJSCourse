@@ -10,8 +10,10 @@ const { store, persistor } = configureStore();
 store.runSaga(rootSaga);
 
 document.addEventListener('DOMContentLoaded', () => {
-    ReactDom.render(<Root 
+    const context = {};
+
+    ReactDom.hydrate(<Root 
         Router={BrowserRouter} 
         store={store} 
-        persistor={persistor} />, document.getElementById('root'));
+        persistor={persistor} context={context}/>, document.getElementById('root'));
 });

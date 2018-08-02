@@ -14,7 +14,7 @@ function renderHTML(html) {
         </head>
         <body>
           <div id="root">${html}</div>
-          <script src="/js/main.js"></script>
+          <script src="/js/index.js"></script>
         </body>
       </html>
   `;
@@ -22,7 +22,9 @@ function renderHTML(html) {
 
 export default function serverRenderer() {
     return (req, res) => {
-        const htmlString = renderToString(<Root Router={StaticRouter}/>);
+        const context = {};
+
+        const htmlString = renderToString(<Root Router={StaticRouter} context={context} location={req.url}/>);
 
         res.send(renderHTML(htmlString));
     };
