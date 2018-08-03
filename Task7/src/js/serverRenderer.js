@@ -3,7 +3,7 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom'
 import Root from './containers/Root';
 
-function renderHTML(html) {
+function renderHTML(html, preloadedState) {
     return `
       <!doctype html>
       <html>
@@ -14,6 +14,11 @@ function renderHTML(html) {
         </head>
         <body>
           <div id="root">${html}</div>
+          <script>
+            // WARNING: See the following for security issues around embedding JSON in HTML:
+            // http://redux.js.org/docs/recipes/ServerRendering.html#security-considerations
+            window.PRELOADED_STATE = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
+          </script>
           <script src="/js/index.js"></script>
         </body>
       </html>
@@ -22,8 +27,10 @@ function renderHTML(html) {
 
 export default function serverRenderer() {
     return (req, res) => {
-        const context = {};
+        const { store, persistor } = configureStore();
 
+        const context = {};
+        console.log(`req.url=${req.url}`)
         const htmlString = renderToString(<Root Router={StaticRouter} context={context} location={req.url}/>);
 
         res.send(renderHTML(htmlString));

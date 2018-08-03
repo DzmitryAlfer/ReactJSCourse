@@ -16,7 +16,7 @@ export default class Root extends Component {
         return (
             <Provider store={store}>
                 <PersistGate loading={null} persistor={persistor}>
-                    <Router context={context}>
+                    <Router context={context} location={location}>
                         <Switch>
                             <Route exact path='/' component={withHomePageTemplate(EmptyResultStatePage)}/>
                             <Route path='/search/:searchQuery?' component={withHomePageTemplate(SearchResultsPage)}/>
