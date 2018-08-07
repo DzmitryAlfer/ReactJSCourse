@@ -2,6 +2,7 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom'
 import Root from './containers/Root';
+import configureStore from './store/configureStore';
 
 function renderHTML(html, preloadedState) {
     return `
@@ -31,8 +32,29 @@ export default function serverRenderer() {
 
         const context = {};
         console.log(`req.url=${req.url}`)
-        const htmlString = renderToString(<Root Router={StaticRouter} context={context} location={req.url}/>);
 
-        res.send(renderHTML(htmlString));
+        const root = (<Root Router={StaticRouter} context={context} location={req.url} store={store} persistor={persistor}/>);
+
+        store.runSaga().done.then(() => {
+          const htmlString = renderToString(root);
+    
+          // context.url will contain the URL to redirect to if a <Redirect> was used
+          if (context.url) {
+            res.writeHead(302, {
+              Location: context.url,
+            });
+            res.end();
+            return;
+          }
+    
+          const preloadedState = store.getState();
+    
+          res.send(renderHTML(htmlString, preloadedState));
+        });
+
+        // Do first render, starts initial actions.
+        renderToString(root);
+        // When the first render is finished, send the END action to redux-saga.
+        store.close();
     };
 }

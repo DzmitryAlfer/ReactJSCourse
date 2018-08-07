@@ -6,7 +6,7 @@ const common = require('./webpack.common.js');
 module.exports = merge(
     common,
     {
-        entry: ['./js/serverRenderer.js'],
+        entry: ['babel-polyfill', './js/serverRenderer.js'],
 
         name: 'server',
         target: 'node',
