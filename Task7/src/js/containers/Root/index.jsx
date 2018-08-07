@@ -11,12 +11,12 @@ import {FilmDescriptionPage} from "../../components/pages/FilmDescriptionPage";
 
 export default class Root extends Component {
     render() {
-        const { Router, store, persistor, location, context} = this.props;
+        const { Router, store, persistor, requestLocation, context} = this.props;
 
         return (
-            <Provider store={store}>
+           /*<Provider store={store}>
                 <PersistGate loading={null} persistor={persistor}>
-                    <Router context={context} location={location}>
+                    <Router context={context} location={requestLocation}>
                         <Switch>
                             <Route exact path='/' component={withHomePageTemplate(EmptyResultStatePage)}/>
                             <Route path='/search/:searchQuery?' component={withHomePageTemplate(SearchResultsPage)}/>
@@ -25,6 +25,17 @@ export default class Root extends Component {
                         </Switch>
                     </Router>
                 </PersistGate>
+            </Provider>*/
+
+            <Provider store={store}>
+                    <Router context={context} location={requestLocation}>
+                        <Switch>
+                            <Route exact path='/' component={withHomePageTemplate(EmptyResultStatePage)}/>
+                            <Route path='/search/:searchQuery?' component={withHomePageTemplate(SearchResultsPage)}/>
+                            <Route path='/film/:movieId' component={FilmDescriptionPage}/>
+                            <Route path='*' component={Page404}/>
+                        </Switch>
+                    </Router>
             </Provider>
         )
     }

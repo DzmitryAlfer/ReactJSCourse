@@ -31,13 +31,17 @@ export default function serverRenderer() {
         const { store, persistor } = configureStore();
 
         const context = {};
+        console.log('-------------------');
         console.log(`req.url=${req.url}`)
+        console.log('-------------------');
 
-        const root = (<Root Router={StaticRouter} context={context} location={req.url} store={store} persistor={persistor}/>);
+        const root = (<Root Router={StaticRouter} context={context} requestLocation={req.url} store={store} persistor={persistor}/>);
 
         store.runSaga().done.then(() => {
           const htmlString = renderToString(root);
-    
+          console.log('-------------------');
+          console.log(htmlString);
+          console.log('-------------------');
           // context.url will contain the URL to redirect to if a <Redirect> was used
           if (context.url) {
             res.writeHead(302, {
