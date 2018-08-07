@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import PropTypes from "prop-types";
-import { PersistGate } from 'redux-persist/integration/react'
+//import { PersistGate } from 'redux-persist/integration/react'
 import { Route, Switch } from 'react-router-dom'
 import {withHomePageTemplate} from '../../components/pages/HomePageTemplate'
 import {EmptyResultStatePage} from "../../components/pages/EmptyResultStatePage";
@@ -11,10 +11,10 @@ import {FilmDescriptionPage} from "../../components/pages/FilmDescriptionPage";
 
 export default class Root extends Component {
     render() {
-        const { Router, store, persistor, requestLocation, context} = this.props;
+        const { Router, PersistGate, store, persistor, requestLocation, context} = this.props;
 
         return (
-           /*<Provider store={store}>
+           <Provider store={store}>
                 <PersistGate loading={null} persistor={persistor}>
                     <Router context={context} location={requestLocation}>
                         <Switch>
@@ -25,9 +25,9 @@ export default class Root extends Component {
                         </Switch>
                     </Router>
                 </PersistGate>
-            </Provider>*/
+            </Provider>
 
-            <Provider store={store}>
+            /*<Provider store={store}>
                     <Router context={context} location={requestLocation}>
                         <Switch>
                             <Route exact path='/' component={withHomePageTemplate(EmptyResultStatePage)}/>
@@ -36,7 +36,7 @@ export default class Root extends Component {
                             <Route path='*' component={Page404}/>
                         </Switch>
                     </Router>
-            </Provider>
+            </Provider>*/
         )
     }
 }

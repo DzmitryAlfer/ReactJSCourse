@@ -35,7 +35,7 @@ export default function serverRenderer() {
         console.log(`req.url=${req.url}`)
         console.log('-------------------');
 
-        const root = (<Root Router={StaticRouter} context={context} requestLocation={req.url} store={store} persistor={persistor}/>);
+        const root = (<Root Router={StaticRouter} PersistGate={(props)=> {return props.children;}} context={context} requestLocation={req.url} store={store} persistor={persistor}/>);
 
         store.runSaga().done.then(() => {
           const htmlString = renderToString(root);
